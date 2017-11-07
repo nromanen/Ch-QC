@@ -1,0 +1,6 @@
+SELECT customer.last_name, count(id_order), country.name_of_country
+	FROM public.customer, public."order", public.country
+    where "order".id_customer=customer.id_customer AND customer.id_country=country.id_country
+    AND country.name_of_country = 'France'
+    GROUP BY customer.last_name, country.name_of_country
+     ;
