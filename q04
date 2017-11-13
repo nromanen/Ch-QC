@@ -1,4 +1,0 @@
-SELECT last_name, first_name, age(date_of_birth) as age 
-from public.employee 
-where date_part('year',age(date_of_birth))>55
-ORDER BY last_name;
