@@ -110,6 +110,8 @@
 
 
 
+
+
 /*4. Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
 */
 SELECT last_name, first_name, extract (year from age(date_of_birth)) as age 
