@@ -1,118 +1,5 @@
 <<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*4. Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
 */
 SELECT last_name, first_name, extract (year from age(date_of_birth)) as age 
@@ -228,16 +115,16 @@ INSERT INTO public.employee (id_employee, last_name, first_name, date_of_birth, 
 
 /* Handabura commit*/
 
-1.Show all info about the employee with ID 8.
+/*1.Show all info about the employee with ID 8.*/
 Select * From employee Where id_employee =101;
 
-8. Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)
+/*8. Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)*/
 Select public.city.name_of_city, last_name, first_name, age(date_of_birth) as age 
 from public.employee Join public.city On public.city.id_city=public.employee.id_city 
 where date_part('year',age(date_of_birth))>60
 ORDER BY public.city.name_of_city;
 
-20. Show the list of customers’ names who used to order the ‘Tofu’ product
+/*20. Show the list of customers’ names who used to order the ‘Tofu’ product*/
   Select Distinct public.customer.last_name,public.customer.first_name,
 public.product.name_of_product 
 From public.customer, public.product, public.order, public.orders_products
@@ -245,15 +132,15 @@ Where public.orders_products.id_order = public.order.id_order And
 public.order.id_customer = public.customer.id_customer And
 public.product.name_of_product ='Tofu‘;
 
-14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997
-4.Select public.employee.last_name || ' ' || public.employee.first_name as "Name employee",
+/*14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997*/
+Select public.employee.last_name || ' ' || public.employee.first_name as "Name employee",
 Count (public.order.id_order)
 From public.employee Left Join public.order on public.employee.id_employee = public.order.id_employee
 Where date_part('year', public.order.date_of_creation)=1997
 Group by "Name employee»
 
 
-21.Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.
+/*21.Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.*/
 SELECT customer.last_name, /*product.name_of_product, */ sum(orders_products.quantity), sum(orders_products.quantity*orders_products.hprice)
     FROM orders_products, public.order, customer, product
     WHERE orders_products.id_order=public.order.id_order
@@ -262,7 +149,7 @@ SELECT customer.last_name, /*product.name_of_product, */ sum(orders_products.qua
     AND product.name_of_product='Tofu'
     GROUP BY customer.last_name
 
-35.Delete one of your records (first run the SELECT statement to check whether you are deleting the appropriate record!)
+/*35.Delete one of your records (first run the SELECT statement to check whether you are deleting the appropriate record!)*/
 .DELETE 
 FROM ordes_products
 WHERE id_order=101;
