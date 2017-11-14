@@ -220,7 +220,7 @@ SELECT  MAX(date_part('year',age(date_of_birth))), MIN(date_part('year',age(date
    			and country.name_of_country<>'France'))
     ;
 	
-	/* Шукаємо французьких замовників, а потім підзапитом не французькі товари */
+	/* Looking for French customers, then with a subquery not French products */
 	
 	
 	
