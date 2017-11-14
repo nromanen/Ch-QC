@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 /*4. Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
 */
@@ -53,7 +50,6 @@ SELECT min(age(date_of_birth)), max(age(date_of_birth)), avg(age(date_of_birth))
     WHERE id_city=1;
 	
 	
-=======
 /* 5.Calculate the count of employees from London */
 SELECT public.city.name_of_city, COUNT (public.employee.id_employee) AS "Count of employees from London"
 from public.city,  public.employee 
@@ -132,9 +128,10 @@ public.product.name_of_product
 From public.customer, public.product, public.order, public.orders_products
 Where public.orders_products.id_order = public.order.id_order And
 public.order.id_customer = public.customer.id_customer And
-public.product.name_of_product ='Tofu‘;
+public.product.name_of_product ='Tofu';
 
-/*14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997*/
+
+/* 14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 */
 Select public.employee.last_name || ' ' || public.employee.first_name as "Name employee",
 Count (public.order.id_order)
 From public.employee Left Join public.order on public.employee.id_employee = public.order.id_employee
@@ -142,7 +139,7 @@ Where date_part('year', public.order.date_of_creation)=1997
 Group by "Name employee»
 
 
-/*21.Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.*/
+/* 21.Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.*/
 SELECT customer.last_name, /*product.name_of_product, */ sum(orders_products.quantity), sum(orders_products.quantity*orders_products.hprice)
     FROM orders_products, public.order, customer, product
     WHERE orders_products.id_order=public.order.id_order
@@ -162,8 +159,7 @@ DELETE
 FROM	employee
 WHERE	id_employee =102 ;
 	
->>>>>>> f2b50239d8ba382169cd1138ba0bfb7b83f39af4
-=======
+
 
 /* 2.Show the list of first and last names of the employees from London. */
 
@@ -234,4 +230,3 @@ SELECT  MAX(date_part('year',age(date_of_birth))), MIN(date_part('year',age(date
 	SET  date_of_hire=current_date
 	;
 
->>>>>>> 51cc440d842586e8bef06b1b7d9165b774c52fe9
