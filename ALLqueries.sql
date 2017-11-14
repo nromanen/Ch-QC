@@ -228,4 +228,48 @@ SELECT  MAX(date_part('year',age(date_of_birth))), MIN(date_part('year',age(date
 	UPDATE public.employee
 	SET  date_of_hire=current_date
 	;
+	/* 12.Show first, last names and dates of birth of the employees who celebrate their birthdays this month.*/
+SELECT employee.first_name, employee.last_name AS "emloyee"
+	FROM public.employee
+    WHERE Month(date_of_birth)=MONTH(CURDATE());
+    ;
+/* 18.Show the list of french customers’ names who have made more than one order.*/
+SELECT customer.first_name ||' '||customer.last_name as "customer", count(id_order)
+	FROM public.customer, public.city, public.country, public."order"
+    
+    WHERE "order".id_customer=customer.id_customer AND customer.id_city=city.id_city
+    AND city.id_country=country.id_country
+    AND country.name_of_country='France'
+    
+    Group by customer.last_name, customer.first_name
+    
+    ;
+/* 23.Show the list of french customers’ names who used to order non-french products. */
+SELECT distinct (customer.first_name ||' '||customer.last_name) as "customer"
+    FROM public.customer, public.city, public.country, public."order"
+   WHERE "order".id_customer=customer.id_customer
+   AND customer.id_city=city.id_city
+   AND city.id_country=country.id_country
+   AND country.name_of_country='France'
+   Group by customer.last_name, customer.first_name, "order".id_order
+   having "order".id_order in (
+       SELECT distinct orders_products.id_order
+        FROM public.orders_products
+       Where orders_products.id_product in (
+              Select  product.id_product from product,country
+              where product.id_country=country.id_country
+              and country.id_country<>'2'))
+/*27.Show the list of product categories along with total ordering sums calculated for the orders made for the products of each category, during the year 1997. */
+SELECT product.name_of_product as 'Product name', product.price as 'Unit price', orders_products.hprice as 'Historical price'
+	FROM public.product, public.orders_products,public.category
+    WHERE category.id_category=product.id_category
+AND order.year of creation='1997'
+    
+    GROUP BY product.id_category,orders_products.quantity , orders_products.hprice ;
+/*33.Change the City field in one of your records using the UPDATE statement. */
+
+UPDATE public.city
+	SET id_city='1', name_of_city='London_new', id_country='1'
+	WHERE id_city='1';
+	
 
