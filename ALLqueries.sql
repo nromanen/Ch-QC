@@ -112,7 +112,7 @@ INSERT INTO public.employee (id_employee, last_name, first_name, date_of_birth, 
 
 /* Handabura commit*/
 
-/*1.Show all info about the employee with ID 8.*/
+/*1.Show all info about the employee with ID 101.*/
 Select * From employee Where id_employee =101;
 
 /*8. Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)*/
@@ -135,7 +135,7 @@ Select public.employee.last_name || ' ' || public.employee.first_name as "Name e
 Count (public.order.id_order)
 From public.employee Left Join public.order on public.employee.id_employee = public.order.id_employee
 Where date_part('year', public.order.date_of_creation)=1997
-Group by "Name employee»
+Group by "Name employee"
 
 
 /* 21.Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.*/
@@ -195,9 +195,7 @@ SELECT  MAX(date_part('year',age(date_of_birth))), MIN(date_part('year',age(date
     AND city.id_country=country.id_country
     AND country.name_of_country='France'
     
-    Group by customer.last_name, customer.first_name
-    
-    ;
+    Group by customer.last_name, customer.first_name;
 	
 	
 	
