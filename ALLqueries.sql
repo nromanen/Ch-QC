@@ -181,8 +181,13 @@ SELECT  MAX(date_part('year',age(date_of_birth))), MIN(date_part('year',age(date
 /*13.Show first and last names of the employees who used to serve orders shipped to Madrid. */	
 	
 	SELECT employee.last_name, employee.first_name, city.name_of_city
-	FROM public.employee, public.city
-    WHERE employee.id_city=city.id_city and city.name_of_city='Madrid'
+	FROM public.employee, public.city, public.order, public.customer
+
+    WHERE 
+    "order".id_employee=employee.id_employee
+    and "order".id_customer=customer.id_customer
+    and customer.id_city=city.id_city
+    and city.name_of_city='Berlin'
     ;
 	
 	
