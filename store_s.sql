@@ -214,6 +214,15 @@ INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VA
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (207, '1996-11-29', 212, 213, '1996-12-02');
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (208, '1996-12-30', 208, 214, '1997-01-03');
 
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (402, '2017-02-24', 403, 406, '2017-02-27');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (401, '2018-01-10', 402, 405, '2018-01-13');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (404, '2015-04-22', 402, 406, '2015-04-27');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (403, '2016-03-15', 402, 407, '2016-03-18');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (405, '2013-04-27', 404, 410, '2013-04-30');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (406, '2012-10-20', 404, 411, '2012-10-23');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (407, '2010-11-01', 402, 410, '2010-11-03');
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (408, '2010-07-10', 402, 410, '2010-07-13');
+
 
 --
 -- TOC entry 2166 (class 0 OID 64179)
@@ -229,6 +238,15 @@ INSERT INTO orders_products (id_order, id_product, price, count) VALUES (208, 20
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (201, 202, 120, 1);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (202, 209, 350, 2);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (207, 210, 400, 2);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (405, 401, 900, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (405, 403, 120, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (406, 404, 200, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (406, 405, 255, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (406, 407, 275, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (407, 408, 280, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (407, 409, 685, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (407, 410, 500, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (408, 401, 840, 2);
 
 
 --
@@ -252,7 +270,21 @@ INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, 
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (213, 'Aleesha', 'Denis', '1984-03-05', 17, 'Via Temenide,43', NULL, NULL, 'customer');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (214, 'Horatio', 'Summers', '1994-06-19', 9, 'Calle Monasterio de Siresa, 196', NULL, NULL, 'customer');
 
-
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (401, 'Ira', 'Ivanova', '1983-05-22', 1, 'fdfgfvdgf', '2010-03-15', NULL, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (402, 'Anna', 'Petrova', '1980-03-14', 1, 'hdfhbdfthdfth', '2011-01-01', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (404, 'Oksana', 'Sidorova', '1960-08-21', 1, ' x vcbxbxc', '2015-06-13', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (403, 'Alina', 'Gorbatova', '1978-07-30', 1, 'fdhtrthfggggdh', '2009-02-16', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (405, 'Roman', 'Shelohov', '1980-12-12', 11, 'Golovna, 148', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (406, 'Oleg', 'Bornev', '1975-01-15', 11, 'Belova, 25', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (407, 'Petro', 'Murovuch', '1982-08-10', 12, 'Lalalaal,256', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (410, 'Dima', 'Krasnov', '1954-06-12', 7, 'dgsdgfvsdgvfs', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (411, 'Tanya', 'Bidulko', '1952-07-13', 8, 'dfdsgsgfds', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (412, 'Mukola', 'Dudko', '1950-10-07', 6, 'dfgsgvszdgv', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (409, 'Vova', 'Pervin', '1956-05-25', 2, 'sdgsdg', '2012-12-05', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (408, 'Ivan', 'Gora', '1948-01-02', 2, 'hfgsdjfhs', '2012-10-10', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (413, 'Tolik', 'Truhanov', '1952-02-06', 9, 'hfkjhgdkxjdxjf', '2013-07-05', 401, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (414, 'Mariya', 'Kutuzova', '1960-03-10', 3, 'fgvsdrfgdsgf', '2005-01-01', NULL, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (415, 'Olga', 'Bruno', '1954-05-06', 3, 'dfgdfgbdfg', '2006-03-04', 414, 'employee');
 --
 -- TOC entry 2168 (class 0 OID 64188)
 -- Dependencies: 190
@@ -269,6 +301,19 @@ INSERT INTO product (id, name, price, id_city, id_category) VALUES (208, 'Motoro
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (204, 'Samsung TV', 450, 1, 3);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (209, 'Samsung Galaxy S8', 350, 7, 1);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (210, 'Samsung Galaxy Tab', 400, 12, 2);
+
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (401, 'SamsungS8', 840, 1, 1);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (402, 'HuaweiP', 305, 6, 1);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (403, 'LenovoK6', 120, 11, 1);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (404, 'XiaomiRD4', 200, 16, 1);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (405, 'AcerEX2519', 255, 2, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (406, 'Lenovo IdeaPad 320', 610, 7, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (407, 'Asus VivoBook', 275, 12, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (408, 'HP 255 G6', 280, 17, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (409, 'LG 43UJ630V', 685, 3, 3);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (410, 'Panasonic TX', 500, 8, 3);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (411, 'Akai UA32DF2110', 155, 13, 3);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (412, 'Sony KD-55XE7005', 1525, 18, 3);
 
 
 --
