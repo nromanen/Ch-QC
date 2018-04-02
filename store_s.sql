@@ -213,7 +213,12 @@ INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VA
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (206, '1997-04-30', 208, 211, '1997-05-02');
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (207, '1996-11-29', 212, 213, '1996-12-02');
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (208, '1996-12-30', 208, 214, '1997-01-03');
-
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (1, '2017-09-09', 2, 3, NULL);
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (2, '2017-07-09', 8, 3, NULL);
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (3, '2017-09-29', 8, 4, NULL);
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (4, '2017-11-23', 9, 5, NULL);
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (5, '2018-04-12', 9, 3, NULL);
+INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (6, '2017-01-19', 9, 4, NULL);
 
 --
 -- TOC entry 2166 (class 0 OID 64179)
@@ -229,6 +234,11 @@ INSERT INTO orders_products (id_order, id_product, price, count) VALUES (208, 20
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (201, 202, 120, 1);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (202, 209, 350, 2);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (207, 210, 400, 2);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (1, 1, 111, 3);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (2, 4, 2343, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (3, 2, 122, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (4, 2, 122, 1);
+INSERT INTO orders_products (id_order, id_product, price, count) VALUES (4, 5, 122, 1);
 
 
 --
@@ -251,6 +261,17 @@ INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, 
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (206, 'Sharyl', 'Ford', '1989-06-24', 1, 'Lizard St., 3', '2006-04-24', 202, 'employee');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (213, 'Aleesha', 'Denis', '1984-03-05', 17, 'Via Temenide,43', NULL, NULL, 'customer');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (214, 'Horatio', 'Summers', '1994-06-19', 9, 'Calle Monasterio de Siresa, 196', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (3, 'Ivan', 'Shevtsov', '1975-11-11', 10, 'prospect df', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (4, 'Oksana', 'Komar', '1990-11-22', 8, 'prospect dfaa', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (10, 'Jason', 'Derulo', '1993-03-01', 6, 'pushkina', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (11, 'Nicki', 'Minaj', '1989-02-03', 7, 'vatutina', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (5, 'Mykola', 'Filipchuk', '1965-09-09', 10, 'prospect df', NULL, NULL, 'customer');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (1, 'Kate', 'Blachette', '1970-12-19', 3, 'Golovna,221,kv.31', '2018-03-30', NULL, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (2, 'Brad', 'Pitt', '1965-09-09', 3, 'Golovna,100,kv.37', '2018-03-30', 1, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (6, 'Inna', 'Gutsuliak', '1995-01-25', 3, 'boulevard', '2018-03-30', 1, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (7, 'David', 'Kreig', '1980-09-12', 5, 'piazza', '2018-03-30', NULL, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (8, 'Drake', 'Dv', '1979-07-16', 5, 'stasiuka', '2018-03-30', 7, 'employee');
+INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (9, 'Jenifer', 'Aniston', '1978-09-16', 5, 'geroiv', '2018-03-30', 7, 'employee');
 
 
 --
@@ -269,6 +290,14 @@ INSERT INTO product (id, name, price, id_city, id_category) VALUES (208, 'Motoro
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (204, 'Samsung TV', 450, 1, 3);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (209, 'Samsung Galaxy S8', 350, 7, 1);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (210, 'Samsung Galaxy Tab', 400, 12, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (2, 'Lg', 222, 8, 3);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (1, 'lenovo', 111, 10, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (4, 'Lenovo', 11, 10, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (3, 'Xiaomi', 1354, 10, 1);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (5, 'HP', 18, 10, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (8, 'Samsung', 568, 10, 2);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (6, 'Nokia', 19, 6, 3);
+INSERT INTO product (id, name, price, id_city, id_category) VALUES (7, 'Meizu', 186, 7, 1);
 
 
 --
