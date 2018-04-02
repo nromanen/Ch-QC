@@ -21,6 +21,7 @@ INSERT INTO city (id, name, country) VALUES (19, 'Bari', 'Italy');
 INSERT INTO city (id, name, country) VALUES (20, 'Pisa', 'Italy');
 INSERT INTO city (id, name, country) VALUES (1, 'London', 'Great Britain');
 
+--
 
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (201, 'Jonas', 'Jenkins', '1975-10-14', 1, 'Baker st. 97', '2012-11-06', NULL, 'employee');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (202, 'Sibyl', 'Perkins', '1948-06-30', 18, 'Viale Treno, 184', '1999-03-28', NULL, 'employee');
@@ -62,6 +63,23 @@ INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, 
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (413, 'Tolik', 'Truhanov', '1952-02-06', 9, 'hfkjhgdkxjdxjf', '2013-07-05', 401, 'employee');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (414, 'Mariya', 'Kutuzova', '1960-03-10', 3, 'fgvsdrfgdsgf', '2005-01-01', NULL, 'employee');
 INSERT INTO person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (415, 'Olga', 'Bruno', '1954-05-06', 3, 'dfgdfgbdfg', '2006-03-04', 414, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (105, 'Basil', 'Reims', '1985-12-22', 6, 'Rue De La Tasse,13', '2016-08-10', 104, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (106, 'Gektor', 'Errera', '1992-12-21', 11, 'ViaMonte,13', '2014-03-08', 101, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (107, 'Cristoforo', 'Colombo', '1936-10-21', 11, 'Boan,11', '1955-06-06', 101, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (109, 'Marlen', 'Ditrich', '1969-01-01', 1, 'Blisse,12', '2016-08-09', 103, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (108, 'Vasko', 'DaGama', '1933-10-11', 16, 'Blisse,12', '1986-08-09', 102, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (101, 'Pedro', 'Ramires', '1990-10-10', 11, 'Libertadores,10', '2015-01-01', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (102, 'Silvio', 'Berluskoni', '1985-12-10', 16, 'Liberty,18', '2012-10-01', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (103, 'John', 'Doy', '1997-06-25', 1, 'Bakerstreet,486', '2017-10-25', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (104, 'Antoine', 'Ditan', '1962-08-22', 6, 'Rue De La Vies,1', '2010-02-12', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (110, 'Jorje', 'Alcantara', '1997-02-10', 11, 'Klosse,10', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (111, 'Massimo', 'Anti', '1991-02-12', 16, 'Piache,10', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (113, 'friedrich', 'Nietzsche', '1926-03-12', 6, 'Dark,11', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (114, 'Simone', 'Zaza', '1996-08-11', 11, 'Drent', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (112, 'Dereck', 'Locker', '2016-03-30', 1, 'Crosshill,11', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (115, 'Piter', 'Pedigrev', '2000-10-11', 6, 'Statemant 24', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (116, 'Giovanni', 'Toldo', '1993-11-12', 6, 'Batimant 24', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (117, 'Gitler', 'Baron', '1850-02-05', 7, 'Ru de la tran', NULL, NULL, 'customer');
 
 --
 
@@ -102,6 +120,18 @@ INSERT INTO product (id, name, price, id_city, id_category) VALUES (409, 'LG 43U
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (410, 'Panasonic TX', 500, 8, 3);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (411, 'Akai UA32DF2110', 155, 13, 3);
 INSERT INTO product (id, name, price, id_city, id_category) VALUES (412, 'Sony KD-55XE7005', 1525, 18, 3);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (111, 'Xiomi+', 650, 11, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (102, 'Iphone8+', 820, 6, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (101, 'Iphone8', 800, 6, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (104, 'Meizu', 320, 1, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (103, 'IphoneX', 1100, 6, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (106, 'Sony', 410, 1, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (105, 'Lenovo', 450, 1, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (108, 'benq', 111, 1, 3);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (107, 'Samsung', 2600, 6, 3);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (110, 'Xiomi', 600, 11, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (109, 'benq', 160, 1, 2);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (112, 'Vertu', 950, 11, 1);
 
 --
 
@@ -127,6 +157,18 @@ INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VA
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (4, '2017-11-23', 9, 5, NULL);
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (5, '2018-04-12', 9, 3, NULL);
 INSERT INTO orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (6, '2017-01-19', 9, 4, NULL);
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (101, '2018-02-02', 105, 113, '2018-03-03');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (102, '2018-02-20', 105, 116, '2018-03-03');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (103, '2018-02-22', 105, 113, '2018-03-08');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (104, '2018-02-28', 109, 112, '2018-03-10');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (105, '2018-02-28', 106, 113, '2018-03-11');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (106, '2017-12-25', 105, 113, '2017-12-26');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (107, '2017-12-29', 105, 116, '2017-12-29');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (108, '2017-12-30', 105, 116, '2017-12-31');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (109, '1997-12-12', 105, 117, '1997-12-12');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (110, '1997-12-12', 105, 113, '1997-12-13');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (111, '1997-12-12', 105, 113, '1997-12-13');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (112, '1997-12-12', 105, 113, '1997-12-13');
 
 
 --
@@ -153,5 +195,17 @@ INSERT INTO orders_products (id_order, id_product, price, count) VALUES (2, 4, 2
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (3, 2, 122, 1);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (4, 2, 122, 1);
 INSERT INTO orders_products (id_order, id_product, price, count) VALUES (4, 5, 122, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (101, 101, 840, 2);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (102, 101, 830, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (103, 102, 950, 2);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (105, 106, 950, 2);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (104, 105, 950, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (106, 104, 330, 5);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (107, 106, 450, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (108, 111, 650, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (109, 112, 900, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (110, 107, 1300, 6);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (111, 108, 850, 3);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (112, 109, 800, 16);
 
 
