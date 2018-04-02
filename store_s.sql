@@ -80,6 +80,14 @@ INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, ad
 INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (115, 'Piter', 'Pedigrev', '2000-10-11', 6, 'Statemant 24', NULL, NULL, 'customer');
 INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (116, 'Giovanni', 'Toldo', '1993-11-12', 6, 'Batimant 24', NULL, NULL, 'customer');
 INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (117, 'Gitler', 'Baron', '1850-02-05', 7, 'Ru de la tran', NULL, NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (301, 'Ivan', 'Ivanov', '1981-01-01', 1, 'Kovarova st., 1', '2000-01-01', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (302, 'Petro', 'Petrov', '1982-02-02', 1, 'Stasyuka st., 2', '2001-02-02', NULL, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (303, 'Vasyl', 'Vasko', '1984-03-03', 2, 'Holovna st., 3', '2002-03-03', NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (304, 'Tetyana', 'Vasko', '1984-03-03', 2, 'Holovna st., 3', '2003-04-04', 301, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (305, 'Ivanna', 'Levchenko', '1985-04-04', 3, 'Heroyiv st., 4', '2004-05-05', 301, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (306, 'Oksana', 'Vasylovych', '1986-05-05', 1, 'Zaliznychna st., 5', '2005-06-06', 301, 'employee');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (307, 'Alisa', 'Antofiichuk', '1987-06-06', 1, 'Kyivska st., 6', '2006-07-07', NULL, 'customer');
+INSERT INTO public.person (id, first_name, last_name, birthday_date, id_city, address, hire_date, id_chief, role) VALUES (308, 'Anton', 'Antoniv', '1988-07-07', 7, 'Lvivska st., 7', '2007-08-08', NULL, 'customer');
 
 --
 
@@ -132,6 +140,10 @@ INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (107, 
 INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (110, 'Xiomi', 600, 11, 1);
 INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (109, 'benq', 160, 1, 2);
 INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (112, 'Vertu', 950, 11, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (302, 'Samsung', 10000, 2, 2);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (301, 'Tofu', 100, 1, 1);
+INSERT INTO public.product (id, name, price, id_city, id_category) VALUES (303, 'LG', 5000, 2, 3);
+
 
 --
 
@@ -169,6 +181,11 @@ INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_d
 INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (110, '1997-12-12', 105, 113, '1997-12-13');
 INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (111, '1997-12-12', 105, 113, '1997-12-13');
 INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (112, '1997-12-12', 105, 113, '1997-12-13');
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (301, '2018-01-01', 301, 303, NULL);
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (302, '2017-02-02', 302, 307, NULL);
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (303, '2016-03-03', 302, 307, NULL);
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (304, '2015-04-04', 302, 308, NULL);
+INSERT INTO public.orders (id, orders_date, id_employee, id_customer, shipping_date) VALUES (305, '1997-01-01', 305, 307, '1997-01-01');
 
 
 --
@@ -207,5 +224,9 @@ INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (
 INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (110, 107, 1300, 6);
 INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (111, 108, 850, 3);
 INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (112, 109, 800, 16);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (301, 301, 105, 5);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (302, 302, 10000, 1);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (303, 301, 100, 2);
+INSERT INTO public.orders_products (id_order, id_product, price, count) VALUES (304, 302, 10005, 3);
 
 
