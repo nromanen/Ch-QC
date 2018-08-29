@@ -137,7 +137,32 @@ INSERT INTO public."Employee" (id, first_name, last_name, birth_date, hire_date,
 INSERT INTO public."Employee" (id, first_name, last_name, birth_date, hire_date, id_chief, notes, address, id_city) VALUES (55, 'Bryn', 'Copestick', '1977-12-28', '2018-02-05', 42, 'Valentyna', 'Burbon Street, House #55', 55);
 INSERT INTO public."Employee" (id, first_name, last_name, birth_date, hire_date, id_chief, notes, address, id_city) VALUES (45, 'Abigail', 'Flannigan', '1977-09-10', '2017-10-03', 43, 'Valentyna', 'Burbon Street, House #45', 45);
 
-
+-- Mykytiuk inserts data into "Employee"
+INSERT INTO "Employee"(
+            id, first_name, last_name, birth_date, hire_date, id_chief, notes, 
+            address, id_city)
+    VALUES (11, 'Taya', 'Vasilinchuk', '21/03/1988', '22/05/2018', 1, 'Ivan Mykytiuk', 
+            'Holovna Street 29', 20);
+            INSERT INTO "Employee"(
+            id, first_name, last_name, birth_date, hire_date, id_chief, notes, 
+            address, id_city)
+    VALUES (12, 'Sonya', 'Baraban', '09/06/1987', '17/12/2017', 1, 'Ivan Mykytiuk', 
+            'Bohuna Street 106', 15);
+            INSERT INTO "Employee"(
+            id, first_name, last_name, birth_date, hire_date, id_chief, notes, 
+            address, id_city)
+    VALUES (13, 'Petya', 'Lunik', '03/09/1986', '04/08/2017', 1, 'Ivan Mykytiuk', 
+            'Kobylyanska Street 45', 8);
+            INSERT INTO "Employee"(
+            id, first_name, last_name, birth_date, hire_date, id_chief, notes, 
+            address, id_city)
+    VALUES (14, 'Toto', 'Cutunio', '09/10/1987', '08/08/2016', 1, 'Ivan Mykytiuk', 
+            'Ruska Street 12', 3);
+            INSERT INTO "Employee"(
+            id, first_name, last_name, birth_date, hire_date, id_chief, notes, 
+            address, id_city)
+    VALUES (15, 'Kostya', 'Dzyu', '29/12/1989', '02/01/2017', 1, 'Ivan Mykytiuk', 
+            'Haharina Street 162', 10); 
 --
 -- TOC entry 2929 (class 0 OID 24839)
 -- Dependencies: 201
