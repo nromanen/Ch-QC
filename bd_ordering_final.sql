@@ -431,8 +431,8 @@ ALTER TABLE ONLY public."Product" ALTER COLUMN id SET DEFAULT nextval('public.pr
 -- Data for Name: Category; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Category" (id, name_category) FROM stdin;
-\.
+
+
 
 
 --
@@ -450,8 +450,7 @@ SELECT pg_catalog.setval('public."Category_id_category_seq"', 1, false);
 -- Data for Name: City; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."City" (id, name_city, id_country) FROM stdin;
-\.
+
 
 
 --
@@ -469,8 +468,7 @@ SELECT pg_catalog.setval('public."City_id_city_seq"', 1, false);
 -- Data for Name: Country; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Country" (id, name_country) FROM stdin;
-\.
+
 
 
 --
@@ -488,8 +486,7 @@ SELECT pg_catalog.setval('public."Country_id_country_seq"', 1, false);
 -- Data for Name: Customer; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Customer" (id, f_name_customer, l_name_customer, id_city) FROM stdin;
-\.
+
 
 
 --
@@ -507,8 +504,7 @@ SELECT pg_catalog.setval('public."Customer_id_customer_seq"', 1, false);
 -- Data for Name: Employee; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Employee" (id, first_name, last_name, birth_date, hire_date, address, id_city, id_chief, notes) FROM stdin;
-\.
+
 
 
 --
@@ -526,8 +522,7 @@ SELECT pg_catalog.setval('public."Employee_id_employee_seq"', 1, false);
 -- Data for Name: Order; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Order" (id, id_customer, id_employee, date) FROM stdin;
-\.
+
 
 
 --
@@ -545,8 +540,7 @@ SELECT pg_catalog.setval('public."Order_id_order_seq"', 1, false);
 -- Data for Name: Order_product; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Order_product" (id_order, id_product, unit_price, amount) FROM stdin;
-\.
+
 
 
 --
@@ -555,8 +549,7 @@ COPY public."Order_product" (id_order, id_product, unit_price, amount) FROM stdi
 -- Data for Name: Producer; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Producer" (id, name_producer, id_country) FROM stdin;
-\.
+
 
 
 --
@@ -574,8 +567,7 @@ SELECT pg_catalog.setval('public."Producer_id_producer_seq"', 1, false);
 -- Data for Name: Product; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."Product" (id, name_product, id_producer, id_category) FROM stdin;
-\.
+
 
 
 --
