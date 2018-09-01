@@ -749,7 +749,7 @@ ALTER TABLE ONLY public."Product"
 ALTER TABLE ONLY public."Order_product"
     ADD CONSTRAINT fk_product_id FOREIGN KEY (id_product) REFERENCES public."Product"(id);
 
-
+ALTER TABLE public."Product" ADD COLUMN price numeric ;
 --
 -- TOC entry 2096 (class 0 OID 0)
 -- Dependencies: 6
