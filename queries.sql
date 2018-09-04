@@ -3,6 +3,7 @@ SELECT "first_name", "last_name" FROM public."Employee" WHERE "first_name" LIKE 
 
 -- ---------------------------------------------------------------------------------------------------------------------
 -- ---------------------------------------------------------------------------------------------------------------------
+9. Show the first and last name(s) of the eldest employee(s). Use a subquery
 SELECT  "last_name", "birth_date" FROM public."Employee" 
 where "birth_date" = (select min("birth_date") FROM public."Employee" )
 
@@ -39,10 +40,9 @@ GROUP BY  e.first_name, e.last_name, required_date;
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- 21. *Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.
-SELECT "Customer"."id", "Customer"."f_name_customer", "Customer"."l_name_customer",
-    SUM("Order_product"."count") as produucts_ordered, -- ordered products total count
-    SUM("Order_product"."amount") as total_amount,  -- total amount selected as already filled column from "Order_product" table
-    SUM("Order_product"."unit_price" * "Order_product"."count") as total_amount_calcualted -- total amount calculated as sum of multiplication "unit_price" * "count" from "Order_product" table
+SELECT "Customer"."id", "Customer"."f_name_customer", "Customer"."l_name_customer",  
+      
+    SUM("Order_product"."unit_price" * "Order_product"."amount") as total_amount_calcualted 
 FROM public."Customer"
 INNER JOIN public."Order" ON "Order"."id_customer" = "Customer"."id"
 INNER JOIN public."Product" ON "Product"."name_product" = 'Tofu'
@@ -75,13 +75,14 @@ JOIN "Country" c ON c.id = pr.id_country AND c.name_country = 'USA');
 
 -- 27. *Show the list of product categories along with total ordering sums calculated for the orders made for the products of each category, during the year 2017.
 SELECT "Category"."id", "Category"."name_category", 
-    SUM("Order_product"."amount") as total_amount, -- total amount selected as sum of already filled column from "Order_product" table
-    SUM("Order_product"."unit_price" * "Order_product"."count") as total_amount_calcualted -- total amount calculated as sum of multiplication "unit_price" * "count" from "Order_product" table
+    SUM("Order_product"."amount") as total_amount, 
+    SUM("Order_product"."unit_price" * "Order_product"."amount") as total_amount_calcualted 
 FROM public."Category"
 INNER JOIN public."Product" ON "Product"."id_category" = "Category"."id"
 INNER JOIN public."Order_product" ON "Order_product"."id_product" = "Product"."id"
 INNER JOIN public."Order" ON "Order"."id" = "Order_product"."id_order" and EXTRACT(year FROM "Order"."date") = 2017
 GROUP BY "Category"."id";
+
 
 -- variant with total products count
 SELECT "Category"."id", "Category"."name_category", 
