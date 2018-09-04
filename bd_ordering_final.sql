@@ -750,6 +750,21 @@ ALTER TABLE ONLY public."Order_product"
     ADD CONSTRAINT fk_product_id FOREIGN KEY (id_product) REFERENCES public."Product"(id);
 
 ALTER TABLE public."Product" ADD COLUMN price numeric ;
+
+CREATE OR REPLACE FUNCTION get_historical_price() RETURNS trigger AS
+$$
+BEGIN
+NEW.unit_price = (select price from "Product" where id = NEW.id_product);
+RETURN NEW;
+END;
+$$ language plpgsql;
+
+
+CREATE TRIGGER historical_price
+BEFORE INSERT 
+ON public."Order_product"
+FOR EACH ROW
+EXECUTE PROCEDURE get_historical_price();
 --
 -- TOC entry 2096 (class 0 OID 0)
 -- Dependencies: 6
