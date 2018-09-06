@@ -1,3 +1,52 @@
+﻿-- Borova 2.	Show the list of first and last names of the employees from London.
+SELECT first_name, last_name FROM "Employee" e 
+JOIN "City" c ON c.id = e.id_city  Where name_city= 'London' 
+
+-- Borova 8.	Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)
+SELECT (name_city), array_agg(birth_date) AS age FROM "City" c 
+JOIN "Employee" e ON c.id = e.id_city where extract(year from age( now() , birth_date ))  >60
+GROUP BY name_city
+
+-- Borova 14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 (use left join).
+SELECT  e.first_name, e.last_name, count(date)
+FROM "Employee" e
+LEFT JOIN "Order" o ON e.id = o.id_employee WHERE EXTRACT(year FROM "date") = 1997
+GROUP BY  e.first_name, e.last_name;
+
+-- Borova 20.	Show the list of customers’ names who used to order the ‘Tofu’ product.
+SELECT "Customer"."id", "Customer"."f_name_customer", "Customer"."l_name_customer" FROM public."Customer"
+INNER JOIN public."Order" ON "Order"."id_customer" = "Customer"."id"
+INNER JOIN public."Product" ON "Product"."name_product" = 'Tofu'
+INNER JOIN public."Order_product" ON "Order_product"."id_order" = "Order"."id" and "Order_product"."id_product" = "Product"."id"
+GROUP BY "Customer"."id";
+
+-- Borova 26.	*Show the total ordering sums calculated for each customer’s country for domestic and non-domestic products separately (e.g.: “France – French products ordered – Non-french products ordered” and so on for each country).
+-- For French products:
+SELECT  cus.id, cus.f_name_customer, cus.l_name_customer, co.name_country AS cust_country, p.name_product, pr.name_producer, c.name_country as product_country
+FROM "Customer" cus 
+JOIN "City" ct ON cus.id_city = ct.id
+JOIN "Country" co ON co.id = ct.id_country AND co.name_country = 'France'
+JOIN "Order" o ON o.id_customer = cus.id 
+JOIN "Order_product" op ON op.id_order = o.id
+JOIN "Product" p ON p.id = op.id_product
+JOIN "Producer" pr ON pr.id = p.id_producer
+JOIN "Country" c ON c.id = pr.id_country AND c.name_country = 'France'
+
+-- For non-french products:
+SELECT  cus.id, cus.f_name_customer, cus.l_name_customer, co.name_country AS cust_country, p.name_product, pr.name_producer, c.name_country as product_country
+FROM "Customer" cus 
+JOIN "City" ct ON cus.id_city = ct.id
+JOIN "Country" co ON co.id = ct.id_country AND co.name_country = 'France'
+JOIN "Order" o ON o.id_customer = cus.id 
+JOIN "Order_product" op ON op.id_order = o.id
+JOIN "Product" p ON p.id = op.id_product
+JOIN "Producer" pr ON pr.id = p.id_producer
+JOIN "Country" c ON c.id = pr.id_country AND c.name_country != 'France'
+
+-- Borova 32.	*Fetch the records you have inserted by the SELECT statement
+SELECT *FROM "Employee" WHERE "Employee"."notes" = 'YuliiaBorova';
+
+
 -- 3. Show the list of first and last names of the employees whose first name begins with letter A.
 SELECT "first_name", "last_name" FROM public."Employee" WHERE "first_name" LIKE 'A%';
 
