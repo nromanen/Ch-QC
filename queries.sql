@@ -1,10 +1,10 @@
 ﻿-- Borova 2.	Show the list of first and last names of the employees from London.
 SELECT first_name, last_name FROM "Employee" e 
-JOIN "City" c ON c.id = e.id_city  Where name_city= 'London' 
+JOIN "City" c ON c.id = e.id_city  Where name_city = 'London' 
 
 -- Borova 8.	Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)
 SELECT (name_city), array_agg(birth_date) AS age FROM "City" c 
-JOIN "Employee" e ON c.id = e.id_city where extract(year from age( now() , birth_date ))  >60
+JOIN "Employee" e ON c.id = e.id_city where extract(year from age( now() , birth_date )) >60
 GROUP BY name_city
 
 -- Borova 14. Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 (use left join).
