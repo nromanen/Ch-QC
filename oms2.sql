@@ -149,7 +149,6 @@ ALTER TABLE public.country_id_seq OWNER TO postgres;
 
 ALTER SEQUENCE public.country_id_seq OWNED BY public.country.id;
 
-
 --
 -- TOC entry 190 (class 1259 OID 16868)
 -- Name: customer; Type: TABLE; Schema: public; Owner: postgres
@@ -802,6 +801,18 @@ ALTER TABLE ONLY public.order_item
 ALTER TABLE ONLY public.order_item
     ADD CONSTRAINT id_product_ FOREIGN KEY (id_product) REFERENCES public.product(id);
 
+	
+-- VS. INSERT COUNTRIES.
+INSERT INTO public.country (name)
+VALUES
+    ('France'),
+    ('England'),
+    ('Spain'),
+    ('Russia'),
+    ('USA'),
+    ('Japan'),
+    ('Ukraine');
+	
 
 -- Completed on 2018-10-11 18:58:25
 
