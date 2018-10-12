@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 9.6.10
--- Dumped by pg_dump version 10.4
+-- Dumped by pg_dump version 9.6.10
 
--- Started on 2018-10-11 18:58:24
+-- Started on 2018-10-12 17:25:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 196 (class 1259 OID 16905)
+-- TOC entry 185 (class 1259 OID 17314)
 -- Name: category; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -52,7 +52,7 @@ CREATE TABLE public.category (
 ALTER TABLE public.category OWNER TO postgres;
 
 --
--- TOC entry 195 (class 1259 OID 16903)
+-- TOC entry 186 (class 1259 OID 17320)
 -- Name: category_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -68,7 +68,7 @@ ALTER TABLE public.category_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2234 (class 0 OID 0)
--- Dependencies: 195
+-- Dependencies: 186
 -- Name: category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -76,13 +76,13 @@ ALTER SEQUENCE public.category_id_seq OWNED BY public.category.id;
 
 
 --
--- TOC entry 198 (class 1259 OID 16917)
+-- TOC entry 187 (class 1259 OID 17322)
 -- Name: city; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.city (
     id integer NOT NULL,
-    name character(1),
+    name character(20),
     id_country integer
 );
 
@@ -90,7 +90,7 @@ CREATE TABLE public.city (
 ALTER TABLE public.city OWNER TO postgres;
 
 --
--- TOC entry 197 (class 1259 OID 16915)
+-- TOC entry 188 (class 1259 OID 17325)
 -- Name: city_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -106,7 +106,7 @@ ALTER TABLE public.city_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2235 (class 0 OID 0)
--- Dependencies: 197
+-- Dependencies: 188
 -- Name: city_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -114,7 +114,7 @@ ALTER SEQUENCE public.city_id_seq OWNED BY public.city.id;
 
 
 --
--- TOC entry 200 (class 1259 OID 16925)
+-- TOC entry 189 (class 1259 OID 17327)
 -- Name: country; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -127,7 +127,7 @@ CREATE TABLE public.country (
 ALTER TABLE public.country OWNER TO postgres;
 
 --
--- TOC entry 199 (class 1259 OID 16923)
+-- TOC entry 190 (class 1259 OID 17333)
 -- Name: country_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -143,14 +143,15 @@ ALTER TABLE public.country_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2236 (class 0 OID 0)
--- Dependencies: 199
+-- Dependencies: 190
 -- Name: country_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.country_id_seq OWNED BY public.country.id;
 
+
 --
--- TOC entry 190 (class 1259 OID 16868)
+-- TOC entry 191 (class 1259 OID 17335)
 -- Name: customer; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -165,7 +166,7 @@ CREATE TABLE public.customer (
 ALTER TABLE public.customer OWNER TO postgres;
 
 --
--- TOC entry 189 (class 1259 OID 16866)
+-- TOC entry 192 (class 1259 OID 17341)
 -- Name: customer_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -181,7 +182,7 @@ ALTER TABLE public.customer_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2237 (class 0 OID 0)
--- Dependencies: 189
+-- Dependencies: 192
 -- Name: customer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -189,7 +190,7 @@ ALTER SEQUENCE public.customer_id_seq OWNED BY public.customer.id;
 
 
 --
--- TOC entry 185 (class 1259 OID 16836)
+-- TOC entry 193 (class 1259 OID 17343)
 -- Name: employee; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -209,7 +210,7 @@ CREATE TABLE public.employee (
 ALTER TABLE public.employee OWNER TO postgres;
 
 --
--- TOC entry 186 (class 1259 OID 16839)
+-- TOC entry 194 (class 1259 OID 17349)
 -- Name: employee_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -225,7 +226,7 @@ ALTER TABLE public.employee_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2238 (class 0 OID 0)
--- Dependencies: 186
+-- Dependencies: 194
 -- Name: employee_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -233,7 +234,7 @@ ALTER SEQUENCE public.employee_id_seq OWNED BY public.employee.id;
 
 
 --
--- TOC entry 188 (class 1259 OID 16860)
+-- TOC entry 195 (class 1259 OID 17351)
 -- Name: order; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -248,7 +249,7 @@ CREATE TABLE public."order" (
 ALTER TABLE public."order" OWNER TO postgres;
 
 --
--- TOC entry 187 (class 1259 OID 16858)
+-- TOC entry 196 (class 1259 OID 17354)
 -- Name: order_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -264,7 +265,7 @@ ALTER TABLE public.order_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2239 (class 0 OID 0)
--- Dependencies: 187
+-- Dependencies: 196
 -- Name: order_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -272,7 +273,7 @@ ALTER SEQUENCE public.order_id_seq OWNED BY public."order".id;
 
 
 --
--- TOC entry 192 (class 1259 OID 16879)
+-- TOC entry 197 (class 1259 OID 17356)
 -- Name: order_item; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -288,7 +289,7 @@ CREATE TABLE public.order_item (
 ALTER TABLE public.order_item OWNER TO postgres;
 
 --
--- TOC entry 191 (class 1259 OID 16877)
+-- TOC entry 198 (class 1259 OID 17359)
 -- Name: order_item_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -304,7 +305,7 @@ ALTER TABLE public.order_item_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2240 (class 0 OID 0)
--- Dependencies: 191
+-- Dependencies: 198
 -- Name: order_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -312,7 +313,7 @@ ALTER SEQUENCE public.order_item_id_seq OWNED BY public.order_item.id;
 
 
 --
--- TOC entry 194 (class 1259 OID 16894)
+-- TOC entry 199 (class 1259 OID 17361)
 -- Name: product; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -328,7 +329,7 @@ CREATE TABLE public.product (
 ALTER TABLE public.product OWNER TO postgres;
 
 --
--- TOC entry 193 (class 1259 OID 16892)
+-- TOC entry 200 (class 1259 OID 17367)
 -- Name: product_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -344,7 +345,7 @@ ALTER TABLE public.product_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2241 (class 0 OID 0)
--- Dependencies: 193
+-- Dependencies: 200
 -- Name: product_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -352,7 +353,7 @@ ALTER SEQUENCE public.product_id_seq OWNED BY public.product.id;
 
 
 --
--- TOC entry 2053 (class 2604 OID 16908)
+-- TOC entry 2048 (class 2604 OID 17369)
 -- Name: category id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -360,7 +361,7 @@ ALTER TABLE ONLY public.category ALTER COLUMN id SET DEFAULT nextval('public.cat
 
 
 --
--- TOC entry 2054 (class 2604 OID 16920)
+-- TOC entry 2049 (class 2604 OID 17370)
 -- Name: city id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -368,7 +369,7 @@ ALTER TABLE ONLY public.city ALTER COLUMN id SET DEFAULT nextval('public.city_id
 
 
 --
--- TOC entry 2055 (class 2604 OID 16928)
+-- TOC entry 2050 (class 2604 OID 17371)
 -- Name: country id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -376,7 +377,7 @@ ALTER TABLE ONLY public.country ALTER COLUMN id SET DEFAULT nextval('public.coun
 
 
 --
--- TOC entry 2050 (class 2604 OID 16871)
+-- TOC entry 2051 (class 2604 OID 17372)
 -- Name: customer id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -384,7 +385,7 @@ ALTER TABLE ONLY public.customer ALTER COLUMN id SET DEFAULT nextval('public.cus
 
 
 --
--- TOC entry 2048 (class 2604 OID 16841)
+-- TOC entry 2052 (class 2604 OID 17373)
 -- Name: employee id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -392,7 +393,7 @@ ALTER TABLE ONLY public.employee ALTER COLUMN id SET DEFAULT nextval('public.emp
 
 
 --
--- TOC entry 2049 (class 2604 OID 16863)
+-- TOC entry 2053 (class 2604 OID 17374)
 -- Name: order id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -400,7 +401,7 @@ ALTER TABLE ONLY public."order" ALTER COLUMN id SET DEFAULT nextval('public.orde
 
 
 --
--- TOC entry 2051 (class 2604 OID 16882)
+-- TOC entry 2054 (class 2604 OID 17375)
 -- Name: order_item id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -408,7 +409,7 @@ ALTER TABLE ONLY public.order_item ALTER COLUMN id SET DEFAULT nextval('public.o
 
 
 --
--- TOC entry 2052 (class 2604 OID 16897)
+-- TOC entry 2055 (class 2604 OID 17376)
 -- Name: product id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -416,72 +417,18 @@ ALTER TABLE ONLY public.product ALTER COLUMN id SET DEFAULT nextval('public.prod
 
 
 --
--- TOC entry 2221 (class 0 OID 16905)
--- Dependencies: 196
+-- TOC entry 2210 (class 0 OID 17314)
+-- Dependencies: 185
 -- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-
-
---
--- TOC entry 2223 (class 0 OID 16917)
--- Dependencies: 198
--- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2225 (class 0 OID 16925)
--- Dependencies: 200
--- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2215 (class 0 OID 16868)
--- Dependencies: 190
--- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2210 (class 0 OID 16836)
--- Dependencies: 185
--- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2213 (class 0 OID 16860)
--- Dependencies: 188
--- Data for Name: order; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2217 (class 0 OID 16879)
--- Dependencies: 192
--- Data for Name: order_item; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 2219 (class 0 OID 16894)
--- Dependencies: 194
--- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
+INSERT INTO public.category (id, name) VALUES (1, 'domestic');
+INSERT INTO public.category (id, name) VALUES (2, 'non-domestic');
 
 
 --
 -- TOC entry 2242 (class 0 OID 0)
--- Dependencies: 195
+-- Dependencies: 186
 -- Name: category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -489,8 +436,32 @@ SELECT pg_catalog.setval('public.category_id_seq', 1, false);
 
 
 --
+-- TOC entry 2212 (class 0 OID 17322)
+-- Dependencies: 187
+-- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.city (id, name, id_country) VALUES (12, 'Chicago             ', 5);
+INSERT INTO public.city (id, name, id_country) VALUES (11, 'Los Angeles         ', 5);
+INSERT INTO public.city (id, name, id_country) VALUES (14, 'Osaka               ', 6);
+INSERT INTO public.city (id, name, id_country) VALUES (13, 'Tokio               ', 6);
+INSERT INTO public.city (id, name, id_country) VALUES (16, 'Lviv                ', 7);
+INSERT INTO public.city (id, name, id_country) VALUES (15, 'Kiev                ', 7);
+INSERT INTO public.city (id, name, id_country) VALUES (2, 'Monaco              ', 1);
+INSERT INTO public.city (id, name, id_country) VALUES (1, 'Paris               ', 1);
+INSERT INTO public.city (id, name, id_country) VALUES (4, 'Oxford              ', 2);
+INSERT INTO public.city (id, name, id_country) VALUES (3, 'London              ', 2);
+INSERT INTO public.city (id, name, id_country) VALUES (6, 'Madrid              ', 3);
+INSERT INTO public.city (id, name, id_country) VALUES (5, 'Manchester          ', 2);
+INSERT INTO public.city (id, name, id_country) VALUES (8, 'Moscow              ', 4);
+INSERT INTO public.city (id, name, id_country) VALUES (7, 'Barcelona           ', 3);
+INSERT INTO public.city (id, name, id_country) VALUES (10, 'New York            ', 5);
+INSERT INTO public.city (id, name, id_country) VALUES (9, 'St.Petersburg       ', 4);
+
+
+--
 -- TOC entry 2243 (class 0 OID 0)
--- Dependencies: 197
+-- Dependencies: 188
 -- Name: city_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -498,17 +469,40 @@ SELECT pg_catalog.setval('public.city_id_seq', 1, false);
 
 
 --
+-- TOC entry 2214 (class 0 OID 17327)
+-- Dependencies: 189
+-- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.country (id, name) VALUES (1, 'France');
+INSERT INTO public.country (id, name) VALUES (2, 'England');
+INSERT INTO public.country (id, name) VALUES (3, 'Spain');
+INSERT INTO public.country (id, name) VALUES (4, 'Russia');
+INSERT INTO public.country (id, name) VALUES (5, 'USA');
+INSERT INTO public.country (id, name) VALUES (6, 'Japan');
+INSERT INTO public.country (id, name) VALUES (7, 'Ukraine');
+
+
+--
 -- TOC entry 2244 (class 0 OID 0)
--- Dependencies: 199
+-- Dependencies: 190
 -- Name: country_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.country_id_seq', 1, false);
+SELECT pg_catalog.setval('public.country_id_seq', 7, true);
+
+
+--
+-- TOC entry 2216 (class 0 OID 17335)
+-- Dependencies: 191
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
 
 
 --
 -- TOC entry 2245 (class 0 OID 0)
--- Dependencies: 189
+-- Dependencies: 192
 -- Name: customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -516,8 +510,16 @@ SELECT pg_catalog.setval('public.customer_id_seq', 1, false);
 
 
 --
+-- TOC entry 2218 (class 0 OID 17343)
+-- Dependencies: 193
+-- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- TOC entry 2246 (class 0 OID 0)
--- Dependencies: 186
+-- Dependencies: 194
 -- Name: employee_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -525,8 +527,16 @@ SELECT pg_catalog.setval('public.employee_id_seq', 1, false);
 
 
 --
+-- TOC entry 2220 (class 0 OID 17351)
+-- Dependencies: 195
+-- Data for Name: order; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- TOC entry 2247 (class 0 OID 0)
--- Dependencies: 187
+-- Dependencies: 196
 -- Name: order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -534,8 +544,16 @@ SELECT pg_catalog.setval('public.order_id_seq', 1, false);
 
 
 --
+-- TOC entry 2222 (class 0 OID 17356)
+-- Dependencies: 197
+-- Data for Name: order_item; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- TOC entry 2248 (class 0 OID 0)
--- Dependencies: 191
+-- Dependencies: 198
 -- Name: order_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -543,8 +561,16 @@ SELECT pg_catalog.setval('public.order_item_id_seq', 1, false);
 
 
 --
+-- TOC entry 2224 (class 0 OID 17361)
+-- Dependencies: 199
+-- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- TOC entry 2249 (class 0 OID 0)
--- Dependencies: 193
+-- Dependencies: 200
 -- Name: product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -552,7 +578,7 @@ SELECT pg_catalog.setval('public.product_id_seq', 1, false);
 
 
 --
--- TOC entry 2076 (class 2606 OID 16913)
+-- TOC entry 2057 (class 2606 OID 17378)
 -- Name: category category_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -561,7 +587,7 @@ ALTER TABLE ONLY public.category
 
 
 --
--- TOC entry 2078 (class 2606 OID 16922)
+-- TOC entry 2059 (class 2606 OID 17380)
 -- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -570,7 +596,7 @@ ALTER TABLE ONLY public.city
 
 
 --
--- TOC entry 2081 (class 2606 OID 16933)
+-- TOC entry 2062 (class 2606 OID 17382)
 -- Name: country country_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -579,7 +605,7 @@ ALTER TABLE ONLY public.country
 
 
 --
--- TOC entry 2065 (class 2606 OID 16876)
+-- TOC entry 2064 (class 2606 OID 17384)
 -- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -588,7 +614,7 @@ ALTER TABLE ONLY public.customer
 
 
 --
--- TOC entry 2057 (class 2606 OID 16849)
+-- TOC entry 2067 (class 2606 OID 17386)
 -- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -597,7 +623,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2070 (class 2606 OID 16884)
+-- TOC entry 2077 (class 2606 OID 17388)
 -- Name: order_item order_item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -606,7 +632,7 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2063 (class 2606 OID 16865)
+-- TOC entry 2073 (class 2606 OID 17390)
 -- Name: order order_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -615,7 +641,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2074 (class 2606 OID 16902)
+-- TOC entry 2081 (class 2606 OID 17392)
 -- Name: product product_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -624,7 +650,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2071 (class 1259 OID 16939)
+-- TOC entry 2078 (class 1259 OID 17393)
 -- Name: fki_id_category; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -632,7 +658,7 @@ CREATE INDEX fki_id_category ON public.product USING btree (id_category);
 
 
 --
--- TOC entry 2058 (class 1259 OID 16997)
+-- TOC entry 2068 (class 1259 OID 17394)
 -- Name: fki_id_chief; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -640,7 +666,7 @@ CREATE INDEX fki_id_chief ON public.employee USING btree (id_chief);
 
 
 --
--- TOC entry 2059 (class 1259 OID 16962)
+-- TOC entry 2069 (class 1259 OID 17395)
 -- Name: fki_id_city; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -648,7 +674,7 @@ CREATE INDEX fki_id_city ON public.employee USING btree (id_city);
 
 
 --
--- TOC entry 2072 (class 1259 OID 16945)
+-- TOC entry 2079 (class 1259 OID 17396)
 -- Name: fki_id_country; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -656,7 +682,7 @@ CREATE INDEX fki_id_country ON public.product USING btree (id_country);
 
 
 --
--- TOC entry 2079 (class 1259 OID 16956)
+-- TOC entry 2060 (class 1259 OID 17397)
 -- Name: fki_id_country_c; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -664,7 +690,7 @@ CREATE INDEX fki_id_country_c ON public.city USING btree (id_country);
 
 
 --
--- TOC entry 2066 (class 1259 OID 17008)
+-- TOC entry 2065 (class 1259 OID 17398)
 -- Name: fki_id_country_c_; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -672,7 +698,7 @@ CREATE INDEX fki_id_country_c_ ON public.customer USING btree (id_country);
 
 
 --
--- TOC entry 2060 (class 1259 OID 16968)
+-- TOC entry 2070 (class 1259 OID 17399)
 -- Name: fki_id_customer; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -680,7 +706,7 @@ CREATE INDEX fki_id_customer ON public."order" USING btree (id_customer);
 
 
 --
--- TOC entry 2067 (class 1259 OID 16980)
+-- TOC entry 2074 (class 1259 OID 17400)
 -- Name: fki_id_order; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -688,7 +714,7 @@ CREATE INDEX fki_id_order ON public.order_item USING btree (id_order);
 
 
 --
--- TOC entry 2061 (class 1259 OID 16974)
+-- TOC entry 2071 (class 1259 OID 17401)
 -- Name: fki_id_product; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -696,7 +722,7 @@ CREATE INDEX fki_id_product ON public."order" USING btree (id_product);
 
 
 --
--- TOC entry 2068 (class 1259 OID 16991)
+-- TOC entry 2075 (class 1259 OID 17402)
 -- Name: fki_id_product_; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -704,7 +730,7 @@ CREATE INDEX fki_id_product_ ON public.order_item USING btree (id_product);
 
 
 --
--- TOC entry 2090 (class 2606 OID 16934)
+-- TOC entry 2091 (class 2606 OID 17403)
 -- Name: product id_category; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -713,7 +739,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2083 (class 2606 OID 16992)
+-- TOC entry 2084 (class 2606 OID 17408)
 -- Name: employee id_chief; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -722,7 +748,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2082 (class 2606 OID 16957)
+-- TOC entry 2085 (class 2606 OID 17413)
 -- Name: employee id_city; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -731,7 +757,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2091 (class 2606 OID 16940)
+-- TOC entry 2092 (class 2606 OID 17418)
 -- Name: product id_country; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -740,7 +766,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2092 (class 2606 OID 16946)
+-- TOC entry 2082 (class 2606 OID 17423)
 -- Name: city id_country; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -749,7 +775,7 @@ ALTER TABLE ONLY public.city
 
 
 --
--- TOC entry 2086 (class 2606 OID 16998)
+-- TOC entry 2083 (class 2606 OID 17428)
 -- Name: customer id_country_c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -758,7 +784,7 @@ ALTER TABLE ONLY public.customer
 
 
 --
--- TOC entry 2084 (class 2606 OID 16963)
+-- TOC entry 2086 (class 2606 OID 17433)
 -- Name: order id_customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -767,7 +793,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2087 (class 2606 OID 16975)
+-- TOC entry 2088 (class 2606 OID 17438)
 -- Name: order_item id_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -776,7 +802,7 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2085 (class 2606 OID 16969)
+-- TOC entry 2087 (class 2606 OID 17443)
 -- Name: order id_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -785,7 +811,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2088 (class 2606 OID 16981)
+-- TOC entry 2089 (class 2606 OID 17448)
 -- Name: order_item id_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -794,27 +820,15 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2089 (class 2606 OID 16986)
+-- TOC entry 2090 (class 2606 OID 17453)
 -- Name: order_item id_product_; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.order_item
     ADD CONSTRAINT id_product_ FOREIGN KEY (id_product) REFERENCES public.product(id);
 
-	
--- VS. INSERT COUNTRIES.
-INSERT INTO public.country (name)
-VALUES
-    ('France'),
-    ('England'),
-    ('Spain'),
-    ('Russia'),
-    ('USA'),
-    ('Japan'),
-    ('Ukraine');
-	
 
--- Completed on 2018-10-11 18:58:25
+-- Completed on 2018-10-12 17:25:30
 
 --
 -- PostgreSQL database dump complete
