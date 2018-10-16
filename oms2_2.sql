@@ -886,3 +886,19 @@ INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (22, 
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (23, 'anna', 'vertuk', 7);
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (24, 'mukola', 'pichur', 7);
 
+-- inserts to employee
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (1, 'jorsh', 'martin', '1959-11-08', '2000-07-07', 'got_street', NULL, 3, NULL);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (2, 'emilie', 'clarck', '1980-12-20', '2001-09-08', 'terrib_street', NULL, 10, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (3, 'john', 'raily', '1990-12-01', '2001-08-12', 'snow_street', NULL, 11, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (4, 'adil', 'rami', '1979-01-30', '2002-11-07', 'paris_street', NULL, 2, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (5, 'loran', 'blan', '1950-02-25', '2000-07-07', 'monc_street', NULL, 1, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (6, 'jeremi', 'mathieu', '1970-08-15', '2003-09-17', 'jo_dallas_street', NULL, 1, 5);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (7, 'antoine', 'griezmann', '1988-09-11', '2003-07-30', 'sent_street', NULL, 1, 5);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (8, 'jack', 'london', '1969-05-29', '2003-09-12', 'thames_street', NULL, 3, 5);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (9, 'taras', 'stepanenko', '1982-02-11', '2004-11-20', 'shevchenka_street', NULL, 16, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (10, 'andriy', 'velichko', '1989-10-19', '2004-01-01', 'main_street_1', NULL, 16, 9);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (11, 'galina', 'tomashevska', '1990-11-20', '2005-01-20', 'podil_str_1', NULL, 15, 9);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (12, 'kira', 'kolenko', '1991-07-16', '2006-08-04', 'holod_str_12', NULL, 15, 9);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (13, 'david', 'villa', '1980-10-14', '2006-08-04', 'hose_str_1', NULL, 6, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (14, 'andres', 'iniesta', '1987-03-09', '2006-08-05', 'jimenes_str_1', NULL, 7, 1);
+
