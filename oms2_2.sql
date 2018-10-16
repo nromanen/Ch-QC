@@ -861,3 +861,28 @@ ALTER TABLE ONLY public.order_item
 -- PostgreSQL database dump complete
 --
 
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (1, 'andre', 'gomes', 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (2, 'alvaro', 'morata', 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (3, 'pedro', 'rodriguez', 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (4, 'olivie', 'giroud', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (5, 'marion', 'cotillard', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (6, 'ngolo', 'kante', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (7, 'wayne', 'rooney', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (8, 'elizabeth', 'queen', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (9, 'harry', 'kane', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (10, 'gareth', 'barry', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (11, 'petr', 'pervii', 4);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (12, 'galina', 'subota', 4);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (13, 'vladimir', 'medved', 4);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (14, 'jessie', 'pinkman', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (15, 'mila', 'kunis', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (16, 'michel', 'jordan', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (17, 'walter', 'wayett', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (18, 'keisuke', 'honda', 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (19, 'john', 'lee', 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (20, 'anton', 'kovalchuk', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (21, 'tetiana', 'maidaniuk', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (22, 'anatolii', 'kolotulo', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (23, 'anna', 'vertuk', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (24, 'mukola', 'pichur', 7);
+
