@@ -957,3 +957,49 @@ ALTER TABLE ONLY public.order_item
 -- PostgreSQL database dump complete
 --
 
+--Anastasiia Iacobciuc 
+
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (401, 'Helen ', 'Bennett', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (403, 'Thomas ', 'Hardy', 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (405, 'Ivan', 'Ivanov', 4);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (406, 'Elizabeth', ' Lincoln', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (407, 'Antonio ', 'Moreno', 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (402, 'Howard', ' Snyder', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (408, 'Petro', 'Antonov', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (438, 'Natalie', 'Pincott', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (439, 'Adam', 'Grey', 1);
+
+
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (409, 'Anne', 'Dodsworth', '1969-07-02', '2000-05-02', '24, place Kleber', ' Anne is fluent in English and German.', 1, 409);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (410, 'Nick', 'Pincott', '1968-04-01', '1993-06-03', '12,Dixon Street', 'Nick is very frendly and good men', 4, 410);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (411, 'Robert', 'Adamov', '1960-05-29', '1990-05-06', '14,Paddington drive', 'Robert Adamov served in the Peace Corps and traveled extensively before completing his degree in English at the University of Michigan and then joining the company. After completing a course entitled ''Selling in Europe'', he was transferred to the London office.', 3, 411);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (412, 'Natalie', 'Bristovn', '1993-08-08', '2015-01-01', '7,Bruce Street', 'Natalie has a BS degree in chemistry from Boston College). She has also completed a certificate program in food retailing management. Janet was hired as a sales associate and was promoted to sales representative.', 11, 412);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (413, 'Martin', 'Sommer', '1972-02-19', '1992-02-05', '67,Araquil st.', 'Martin is fluent in English.', 6, 413);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (440, 'Alison', 'Argent', '1991-01-01', '2015-12-01', 'Street10', 'Active', 2, NULL);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (441, 'Gabriella', 'Dhupris', '1992-02-02', '2015-12-02', 'Street11', 'Active', 5, NULL);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (442, 'Christian', 'Gray', '1993-03-03', '2015-12-03', 'Street12', 'Passive', 10, NULL);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (443, 'Daniella', 'Monnet', '1994-04-04', '2015-12-04', 'Street13', 'Active', 14, NULL);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (444, 'Jasper', 'Blake', '1995-05-05', '2015-12-05', 'Street14', 'Passive', 15, NULL);
+
+
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (426, '2010-04-07', 402, 2, 410);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (425, '2005-07-04', 401, 1, 409);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (428, '2012-08-11', 405, 5, 412);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (427, '2011-10-10', 403, 3, 411);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (430, '2015-04-04', 407, 7, NULL);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (429, '2013-09-04', 406, 6, 413);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (437, '2017-08-04', 439, 1, 441);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee) VALUES (436, '2016-04-04', 438, 1, 440);
+
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (414, 'Tofu', 20, 1, 3);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (415, 'Cheesecake', 25, 1, 1);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (416, 'Mozzarella', 18, 2, 2);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (417, 'Juice', 10, 1, 7);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (418, 'Bread', 7, 1, 1);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (420, 'Mascarpone Fabioli', 19, 2, 6);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (421, 'Gorgonzola Telino', 24, 2, 2);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (422, 'Chocolate', 8, 1, 1);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (423, 'Arabika Coffee', 13, 1, 3);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (424, 'Camembert Pierrot', 15, 2, 4);
+
+
