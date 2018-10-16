@@ -1,0 +1,28 @@
+4.    Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
+
+SELECT id, first_name, last_name, age (date_birth) FROM public.employee
+WHERE  age (date_birth)  > '55 years 0 mons 0 days' 
+Order by employee.last_name;
+
+11. Show the list of all cities where the employees are from.
+
+SELECT city.name FROM public.city JOIN public.employee on city.id=employee.id_city GROUP BY city.name
+
+18. Show the list of french customers’ names who have made more than one order (use grouping).
+
+SELECT customer.id, customer.last_name, customer.first_name FROM public.customer JOIN public.order o on o.id_customer = customer.id
+WHERE customer.id_country=1 GROUP BY customer.id HAVING COUNT(customer.id) > 1;
+
+25. *Show the total ordering sum calculated for each country of customer.
+
+SELECT country.name, SUM (order_item.count*order_item.historical_price) as orders_sum FROM public.country JOIN public.city on country.id = city.id_country
+JOIN public.order o on city.id=o.id_city_ship_adr_ JOIN public.order_item on order_item.id_order=o.id 
+GROUP BY country.name
+
+32. *Fetch the records you have inserted by the SELECT statement
+
+SELECT employee.id, employee.last_name, employee.first_name, employee.date_birth, employee.hire_date, employee.adress, city.name as city, country.name as country, notes FROM employee
+join city on employee.id_city=city.id join country on city.id_country=country.id where notes='AP'
+order by id desc
+limit 5
+   
