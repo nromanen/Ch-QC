@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped by pg_dump version 10.4
 
--- Started on 2018-10-16 16:54:56
+-- Started on 2018-10-16 17:58:10
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 196 (class 1259 OID 16394)
+-- TOC entry 196 (class 1259 OID 34024)
 -- Name: category; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -52,7 +52,7 @@ CREATE TABLE public.category (
 ALTER TABLE public.category OWNER TO postgres;
 
 --
--- TOC entry 197 (class 1259 OID 16400)
+-- TOC entry 197 (class 1259 OID 34030)
 -- Name: category_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -76,7 +76,7 @@ ALTER SEQUENCE public.category_id_seq OWNED BY public.category.id;
 
 
 --
--- TOC entry 198 (class 1259 OID 16402)
+-- TOC entry 198 (class 1259 OID 34032)
 -- Name: city; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -90,7 +90,7 @@ CREATE TABLE public.city (
 ALTER TABLE public.city OWNER TO postgres;
 
 --
--- TOC entry 199 (class 1259 OID 16405)
+-- TOC entry 199 (class 1259 OID 34035)
 -- Name: city_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -114,7 +114,7 @@ ALTER SEQUENCE public.city_id_seq OWNED BY public.city.id;
 
 
 --
--- TOC entry 200 (class 1259 OID 16407)
+-- TOC entry 200 (class 1259 OID 34037)
 -- Name: country; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -127,7 +127,7 @@ CREATE TABLE public.country (
 ALTER TABLE public.country OWNER TO postgres;
 
 --
--- TOC entry 201 (class 1259 OID 16413)
+-- TOC entry 201 (class 1259 OID 34043)
 -- Name: country_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -151,7 +151,7 @@ ALTER SEQUENCE public.country_id_seq OWNED BY public.country.id;
 
 
 --
--- TOC entry 202 (class 1259 OID 16415)
+-- TOC entry 202 (class 1259 OID 34045)
 -- Name: customer; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -166,7 +166,7 @@ CREATE TABLE public.customer (
 ALTER TABLE public.customer OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 16421)
+-- TOC entry 203 (class 1259 OID 34051)
 -- Name: customer_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -190,7 +190,7 @@ ALTER SEQUENCE public.customer_id_seq OWNED BY public.customer.id;
 
 
 --
--- TOC entry 204 (class 1259 OID 16423)
+-- TOC entry 204 (class 1259 OID 34053)
 -- Name: employee; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -211,7 +211,7 @@ CREATE TABLE public.employee (
 ALTER TABLE public.employee OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 16429)
+-- TOC entry 205 (class 1259 OID 34059)
 -- Name: employee_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -235,7 +235,7 @@ ALTER SEQUENCE public.employee_id_seq OWNED BY public.employee.id;
 
 
 --
--- TOC entry 206 (class 1259 OID 16431)
+-- TOC entry 206 (class 1259 OID 34061)
 -- Name: order; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -252,7 +252,7 @@ CREATE TABLE public."order" (
 ALTER TABLE public."order" OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 16434)
+-- TOC entry 207 (class 1259 OID 34064)
 -- Name: order_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -276,7 +276,7 @@ ALTER SEQUENCE public.order_id_seq OWNED BY public."order".id;
 
 
 --
--- TOC entry 208 (class 1259 OID 16436)
+-- TOC entry 208 (class 1259 OID 34066)
 -- Name: order_item; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -292,7 +292,7 @@ CREATE TABLE public.order_item (
 ALTER TABLE public.order_item OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 16439)
+-- TOC entry 209 (class 1259 OID 34069)
 -- Name: order_item_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -316,7 +316,7 @@ ALTER SEQUENCE public.order_item_id_seq OWNED BY public.order_item.id;
 
 
 --
--- TOC entry 210 (class 1259 OID 16441)
+-- TOC entry 210 (class 1259 OID 34071)
 -- Name: product; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -332,7 +332,7 @@ CREATE TABLE public.product (
 ALTER TABLE public.product OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 16447)
+-- TOC entry 211 (class 1259 OID 34077)
 -- Name: product_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -356,7 +356,7 @@ ALTER SEQUENCE public.product_id_seq OWNED BY public.product.id;
 
 
 --
--- TOC entry 2717 (class 2604 OID 16449)
+-- TOC entry 2717 (class 2604 OID 34079)
 -- Name: category id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -364,7 +364,7 @@ ALTER TABLE ONLY public.category ALTER COLUMN id SET DEFAULT nextval('public.cat
 
 
 --
--- TOC entry 2718 (class 2604 OID 16450)
+-- TOC entry 2718 (class 2604 OID 34080)
 -- Name: city id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -372,7 +372,7 @@ ALTER TABLE ONLY public.city ALTER COLUMN id SET DEFAULT nextval('public.city_id
 
 
 --
--- TOC entry 2719 (class 2604 OID 16451)
+-- TOC entry 2719 (class 2604 OID 34081)
 -- Name: country id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -380,7 +380,7 @@ ALTER TABLE ONLY public.country ALTER COLUMN id SET DEFAULT nextval('public.coun
 
 
 --
--- TOC entry 2720 (class 2604 OID 16452)
+-- TOC entry 2720 (class 2604 OID 34082)
 -- Name: customer id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -388,7 +388,7 @@ ALTER TABLE ONLY public.customer ALTER COLUMN id SET DEFAULT nextval('public.cus
 
 
 --
--- TOC entry 2721 (class 2604 OID 16453)
+-- TOC entry 2721 (class 2604 OID 34083)
 -- Name: employee id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -396,7 +396,7 @@ ALTER TABLE ONLY public.employee ALTER COLUMN id SET DEFAULT nextval('public.emp
 
 
 --
--- TOC entry 2722 (class 2604 OID 16454)
+-- TOC entry 2722 (class 2604 OID 34084)
 -- Name: order id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -404,7 +404,7 @@ ALTER TABLE ONLY public."order" ALTER COLUMN id SET DEFAULT nextval('public.orde
 
 
 --
--- TOC entry 2723 (class 2604 OID 16455)
+-- TOC entry 2723 (class 2604 OID 34085)
 -- Name: order_item id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -412,7 +412,7 @@ ALTER TABLE ONLY public.order_item ALTER COLUMN id SET DEFAULT nextval('public.o
 
 
 --
--- TOC entry 2724 (class 2604 OID 16456)
+-- TOC entry 2724 (class 2604 OID 34086)
 -- Name: product id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -420,7 +420,7 @@ ALTER TABLE ONLY public.product ALTER COLUMN id SET DEFAULT nextval('public.prod
 
 
 --
--- TOC entry 2887 (class 0 OID 16394)
+-- TOC entry 2887 (class 0 OID 34024)
 -- Dependencies: 196
 -- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -430,7 +430,7 @@ INSERT INTO public.category (id, name) VALUES (2, 'non-domestic');
 
 
 --
--- TOC entry 2889 (class 0 OID 16402)
+-- TOC entry 2889 (class 0 OID 34032)
 -- Dependencies: 198
 -- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -454,7 +454,7 @@ INSERT INTO public.city (id, name, id_country) VALUES (9, 'St.Petersburg       '
 
 
 --
--- TOC entry 2891 (class 0 OID 16407)
+-- TOC entry 2891 (class 0 OID 34037)
 -- Dependencies: 200
 -- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -469,7 +469,7 @@ INSERT INTO public.country (id, name) VALUES (7, 'Ukraine');
 
 
 --
--- TOC entry 2893 (class 0 OID 16415)
+-- TOC entry 2893 (class 0 OID 34045)
 -- Dependencies: 202
 -- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -498,10 +498,16 @@ INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (21, 
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (22, 'anatolii', 'kolotulo', 7);
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (23, 'anna', 'vertuk', 7);
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (24, 'mukola', 'pichur', 7);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (701, 'Clement ', 'Matthews', 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (703, 'Agnes', 'Shields', 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (704, 'Catherine', 'Flynn', 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (705, 'William', 'Lane', 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (702, 'Geoffroy ', 'St-Cyr', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (706, 'Anne-Claire', 'PichГ© ', 1);
 
 
 --
--- TOC entry 2895 (class 0 OID 16423)
+-- TOC entry 2895 (class 0 OID 34053)
 -- Dependencies: 204
 -- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -520,25 +526,36 @@ INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, a
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (10, 'andriy', 'velichko', '1989-10-19', '2004-01-01', 'main_street_1', NULL, 16, 9, 7);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (9, 'taras', 'stepanenko', '1982-02-11', '2004-11-20', 'shevchenka_street', NULL, 16, 1, 7);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (14, 'andres', 'iniesta', '1987-03-09', '2006-08-05', 'jimenes_str_1', NULL, 7, 1, 3);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (712, 'Charles', 'Washington', '1960-01-08', '1995-10-18', NULL, 'AP', 10, NULL, 5);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (714, 'Lauren', 'Baker', '1978-02-24', '2005-08-01', NULL, 'AP', 13, 712, 6);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (715, 'Jayson', 'Ellis', '1992-01-01', '2013-05-20', NULL, 'AP', 15, 714, 7);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (716, 'Julio', 'Carrizo', '1985-01-20', '2008-03-09', NULL, 'AP', 7, 714, 3);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (713, 'Lindsey', 'Harris', '1958-12-15', '1990-11-01', NULL, 'OM', 11, 712, 5);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (711, 'Darrell', 'Harmon', '1980-05-12', '2002-01-20', 'Holovna, 21 str.', 'AP', 1, 713, 1);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief, id_country) VALUES (717, 'Paul', 'Pop', '1975-05-19', '2017-01-18', NULL, 'AP', 16, 713, 6);
 
 
 --
--- TOC entry 2897 (class 0 OID 16431)
+-- TOC entry 2897 (class 0 OID 34061)
 -- Dependencies: 206
 -- Data for Name: order; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (2, '1997-02-03', 5, 1, 4, '1997-02-04');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (1, '1997-01-01', 4, 1, 3, '1997-02-02');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (4, '2012-09-10', 9, 2, 8, '2012-10-12');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (3, '2010-10-12', 6, 1, 5, '2011-11-12');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (6, '2005-08-09', 11, 4, 10, '2005-08-11');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (5, '2007-07-09', 10, 2, 9, '2008-01-01');
 INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (7, '2008-09-10', 1, 3, 13, '2008-10-11');
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (2, '1997-02-03', 5, 1, 4, '1997-02-04');
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (731, '2015-01-06', 702, 1, 715, '2015-01-15');
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (732, '2011-01-12', 706, 2, 714, '2011-01-20');
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (733, '2012-02-18', 702, 2, 715, '2012-02-19');
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_, id_employee, delivery_date) VALUES (734, '2017-08-21', 705, 5, 711, '2017-08-23');
 
 
 --
--- TOC entry 2899 (class 0 OID 16436)
+-- TOC entry 2899 (class 0 OID 34066)
 -- Dependencies: 208
 -- Data for Name: order_item; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -550,10 +567,14 @@ INSERT INTO public.order_item (id, count, historical_price, id_order, id_product
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (5, 3, 600, 5, 10);
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (6, 10, 210, 6, 8);
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (7, 100, 500, 7, 4);
+INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (741, 1, 12, 731, 721);
+INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (742, 2, 15, 732, 722);
+INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (743, 1, 12, 733, 722);
+INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (744, 2, 90, 734, 723);
 
 
 --
--- TOC entry 2901 (class 0 OID 16441)
+-- TOC entry 2901 (class 0 OID 34071)
 -- Dependencies: 210
 -- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -568,6 +589,9 @@ INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUE
 INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (8, 'hot_sauce', 30, 1, 3);
 INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (9, 'tea', 100, 1, 2);
 INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (10, 'butter', 200, 1, 2);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (721, 'Tofu', 12, 1, 6);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (722, 'Pudding', 20, 1, 5);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (723, 'Chair', 100, 2, 7);
 
 
 --
@@ -643,7 +667,7 @@ SELECT pg_catalog.setval('public.product_id_seq', 1, false);
 
 
 --
--- TOC entry 2726 (class 2606 OID 16458)
+-- TOC entry 2726 (class 2606 OID 34088)
 -- Name: category category_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -652,7 +676,7 @@ ALTER TABLE ONLY public.category
 
 
 --
--- TOC entry 2728 (class 2606 OID 16460)
+-- TOC entry 2728 (class 2606 OID 34090)
 -- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -661,7 +685,7 @@ ALTER TABLE ONLY public.city
 
 
 --
--- TOC entry 2731 (class 2606 OID 16462)
+-- TOC entry 2731 (class 2606 OID 34092)
 -- Name: country country_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -670,7 +694,7 @@ ALTER TABLE ONLY public.country
 
 
 --
--- TOC entry 2733 (class 2606 OID 16464)
+-- TOC entry 2733 (class 2606 OID 34094)
 -- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -679,7 +703,7 @@ ALTER TABLE ONLY public.customer
 
 
 --
--- TOC entry 2736 (class 2606 OID 16466)
+-- TOC entry 2736 (class 2606 OID 34096)
 -- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -688,7 +712,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2748 (class 2606 OID 16468)
+-- TOC entry 2748 (class 2606 OID 34098)
 -- Name: order_item order_item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -697,7 +721,7 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2744 (class 2606 OID 16470)
+-- TOC entry 2744 (class 2606 OID 34100)
 -- Name: order order_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -706,7 +730,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2752 (class 2606 OID 16472)
+-- TOC entry 2752 (class 2606 OID 34102)
 -- Name: product product_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -715,7 +739,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2749 (class 1259 OID 16473)
+-- TOC entry 2749 (class 1259 OID 34103)
 -- Name: fki_id_category; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -723,7 +747,7 @@ CREATE INDEX fki_id_category ON public.product USING btree (id_category);
 
 
 --
--- TOC entry 2737 (class 1259 OID 16474)
+-- TOC entry 2737 (class 1259 OID 34104)
 -- Name: fki_id_chief; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -731,7 +755,7 @@ CREATE INDEX fki_id_chief ON public.employee USING btree (id_chief);
 
 
 --
--- TOC entry 2738 (class 1259 OID 16475)
+-- TOC entry 2738 (class 1259 OID 34105)
 -- Name: fki_id_city; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -739,7 +763,7 @@ CREATE INDEX fki_id_city ON public.employee USING btree (id_city);
 
 
 --
--- TOC entry 2740 (class 1259 OID 16476)
+-- TOC entry 2740 (class 1259 OID 34106)
 -- Name: fki_id_city___; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -747,7 +771,7 @@ CREATE INDEX fki_id_city___ ON public."order" USING btree (id_city_ship_adr_);
 
 
 --
--- TOC entry 2750 (class 1259 OID 16477)
+-- TOC entry 2750 (class 1259 OID 34107)
 -- Name: fki_id_country; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -755,7 +779,7 @@ CREATE INDEX fki_id_country ON public.product USING btree (id_country);
 
 
 --
--- TOC entry 2739 (class 1259 OID 16721)
+-- TOC entry 2739 (class 1259 OID 34108)
 -- Name: fki_id_country_1; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -763,7 +787,7 @@ CREATE INDEX fki_id_country_1 ON public.employee USING btree (id_country);
 
 
 --
--- TOC entry 2729 (class 1259 OID 16478)
+-- TOC entry 2729 (class 1259 OID 34109)
 -- Name: fki_id_country_c; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -771,7 +795,7 @@ CREATE INDEX fki_id_country_c ON public.city USING btree (id_country);
 
 
 --
--- TOC entry 2734 (class 1259 OID 16479)
+-- TOC entry 2734 (class 1259 OID 34110)
 -- Name: fki_id_country_c_; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -779,7 +803,7 @@ CREATE INDEX fki_id_country_c_ ON public.customer USING btree (id_country);
 
 
 --
--- TOC entry 2741 (class 1259 OID 16480)
+-- TOC entry 2741 (class 1259 OID 34111)
 -- Name: fki_id_customer; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -787,7 +811,7 @@ CREATE INDEX fki_id_customer ON public."order" USING btree (id_customer);
 
 
 --
--- TOC entry 2742 (class 1259 OID 16554)
+-- TOC entry 2742 (class 1259 OID 34112)
 -- Name: fki_id_employee; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -795,7 +819,7 @@ CREATE INDEX fki_id_employee ON public."order" USING btree (id_employee);
 
 
 --
--- TOC entry 2745 (class 1259 OID 16481)
+-- TOC entry 2745 (class 1259 OID 34113)
 -- Name: fki_id_order; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -803,7 +827,7 @@ CREATE INDEX fki_id_order ON public.order_item USING btree (id_order);
 
 
 --
--- TOC entry 2746 (class 1259 OID 16483)
+-- TOC entry 2746 (class 1259 OID 34114)
 -- Name: fki_id_product_; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -811,7 +835,7 @@ CREATE INDEX fki_id_product_ ON public.order_item USING btree (id_product);
 
 
 --
--- TOC entry 2764 (class 2606 OID 16484)
+-- TOC entry 2764 (class 2606 OID 34115)
 -- Name: product id_category; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -820,7 +844,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2755 (class 2606 OID 16489)
+-- TOC entry 2755 (class 2606 OID 34120)
 -- Name: employee id_chief; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -829,7 +853,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2756 (class 2606 OID 16494)
+-- TOC entry 2756 (class 2606 OID 34125)
 -- Name: employee id_city; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -838,7 +862,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2758 (class 2606 OID 16499)
+-- TOC entry 2758 (class 2606 OID 34130)
 -- Name: order id_city; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -847,7 +871,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2765 (class 2606 OID 16509)
+-- TOC entry 2765 (class 2606 OID 34135)
 -- Name: product id_country; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -856,7 +880,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- TOC entry 2753 (class 2606 OID 16514)
+-- TOC entry 2753 (class 2606 OID 34140)
 -- Name: city id_country; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -865,7 +889,7 @@ ALTER TABLE ONLY public.city
 
 
 --
--- TOC entry 2757 (class 2606 OID 16716)
+-- TOC entry 2757 (class 2606 OID 34145)
 -- Name: employee id_country_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -874,7 +898,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2754 (class 2606 OID 16519)
+-- TOC entry 2754 (class 2606 OID 34150)
 -- Name: customer id_country_c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -883,7 +907,7 @@ ALTER TABLE ONLY public.customer
 
 
 --
--- TOC entry 2759 (class 2606 OID 16524)
+-- TOC entry 2759 (class 2606 OID 34155)
 -- Name: order id_customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -892,7 +916,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2760 (class 2606 OID 16549)
+-- TOC entry 2760 (class 2606 OID 34160)
 -- Name: order id_employee; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -901,7 +925,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- TOC entry 2761 (class 2606 OID 16529)
+-- TOC entry 2761 (class 2606 OID 34165)
 -- Name: order_item id_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -910,7 +934,7 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2762 (class 2606 OID 16539)
+-- TOC entry 2762 (class 2606 OID 34170)
 -- Name: order_item id_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -919,7 +943,7 @@ ALTER TABLE ONLY public.order_item
 
 
 --
--- TOC entry 2763 (class 2606 OID 16544)
+-- TOC entry 2763 (class 2606 OID 34175)
 -- Name: order_item id_product_; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -927,7 +951,7 @@ ALTER TABLE ONLY public.order_item
     ADD CONSTRAINT id_product_ FOREIGN KEY (id_product) REFERENCES public.product(id);
 
 
--- Completed on 2018-10-16 16:54:57
+-- Completed on 2018-10-16 17:58:11
 
 --
 -- PostgreSQL database dump complete
