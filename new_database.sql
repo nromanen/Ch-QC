@@ -159,7 +159,8 @@ CREATE TABLE public.customer (
     id integer NOT NULL,
     first_name text,
     last_name text,
-    id_country integer
+    id_country integer,
+	id_city integer
 );
 
 
@@ -474,36 +475,36 @@ INSERT INTO public.country (id, name) VALUES (7, 'Ukraine');
 -- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (1, 'andre', 'gomes', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (2, 'alvaro', 'morata', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (3, 'pedro', 'rodriguez', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (4, 'olivie', 'giroud', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (5, 'marion', 'cotillard', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (6, 'ngolo', 'kante', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (7, 'wayne', 'rooney', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (8, 'elizabeth', 'queen', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (9, 'harry', 'kane', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (10, 'gareth', 'barry', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (11, 'petr', 'pervii', 4);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (12, 'galina', 'subota', 4);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (13, 'vladimir', 'medved', 4);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (14, 'jessie', 'pinkman', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (15, 'mila', 'kunis', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (16, 'michel', 'jordan', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (17, 'walter', 'wayett', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (18, 'keisuke', 'honda', 6);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (19, 'john', 'lee', 6);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (20, 'anton', 'kovalchuk', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (21, 'tetiana', 'maidaniuk', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (22, 'anatolii', 'kolotulo', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (23, 'anna', 'vertuk', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (24, 'mukola', 'pichur', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (701, 'Clement ', 'Matthews', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (703, 'Agnes', 'Shields', 6);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (704, 'Catherine', 'Flynn', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (705, 'William', 'Lane', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (702, 'Geoffroy ', 'St-Cyr', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (706, 'Anne-Claire', 'PichГ© ', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (1, 'andre', 'gomes', 3, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (2, 'alvaro', 'morata', 3, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (3, 'pedro', 'rodriguez', 3, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (4, 'olivie', 'giroud', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (5, 'marion', 'cotillard', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (6, 'ngolo', 'kante', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (7, 'wayne', 'rooney', 2, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (8, 'elizabeth', 'queen', 2, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (9, 'harry', 'kane', 2, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (10, 'gareth', 'barry', 2, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (11, 'petr', 'pervii', 4, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (12, 'galina', 'subota', 4, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (13, 'vladimir', 'medved', 4, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (14, 'jessie', 'pinkman', 5, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (15, 'mila', 'kunis', 5, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (16, 'michel', 'jordan', 5, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (17, 'walter', 'wayett', 5, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (18, 'keisuke', 'honda', 6, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (19, 'john', 'lee', 6, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (20, 'anton', 'kovalchuk', 7, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (21, 'tetiana', 'maidaniuk', 7, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (22, 'anatolii', 'kolotulo', 7, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (23, 'anna', 'vertuk', 7, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (24, 'mukola', 'pichur', 7, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (701, 'Clement ', 'Matthews', 5, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (703, 'Agnes', 'Shields', 6, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (704, 'Catherine', 'Flynn', 2, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (705, 'William', 'Lane', 3, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (702, 'Geoffroy ', 'St-Cyr', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (706, 'Anne-Claire', 'PichГ© ', 1, 1);
 
 
 --
@@ -904,6 +905,9 @@ ALTER TABLE ONLY public.employee
 
 ALTER TABLE ONLY public.customer
     ADD CONSTRAINT id_country_c FOREIGN KEY (id_country) REFERENCES public.country(id);
+	
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT id_city_c FOREIGN KEY (id_city) REFERENCES public.city(id);
 
 
 --
@@ -959,15 +963,15 @@ ALTER TABLE ONLY public.order_item
 
 --Anastasiia Iacobciuc 
 
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (401, 'Helen ', 'Bennett', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (403, 'Thomas ', 'Hardy', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (405, 'Ivan', 'Ivanov', 4);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (406, 'Elizabeth', ' Lincoln', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (407, 'Antonio ', 'Moreno', 6);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (402, 'Howard', ' Snyder', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (408, 'Petro', 'Antonov', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (438, 'Natalie', 'Pincott', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (439, 'Adam', 'Grey', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (401, 'Helen ', 'Bennett', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (403, 'Thomas ', 'Hardy', 3, 3);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (405, 'Ivan', 'Ivanov', 4, 4);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (406, 'Elizabeth', ' Lincoln', 5, 5);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (407, 'Antonio ', 'Moreno', 6, 6);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (402, 'Howard', ' Snyder', 2, 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (408, 'Petro', 'Antonov', 7, 2);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (438, 'Natalie', 'Pincott', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (439, 'Adam', 'Grey', 1, 1);
 
 
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (409, 'Anne', 'Dodsworth', '1969-07-02', '2000-05-02', '24, place Kleber', ' Anne is fluent in English and German.', 1, 409);
@@ -1004,14 +1008,14 @@ INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUE
 
 --Inserts Elena Martynovich
 
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (600, 'Alena', 'Kushnir', 7);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (601, 'Zinaida', 'Kravetz', 4);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (602, 'Jack', 'Stelot', 5);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (603, 'Iokko', 'Grotrico', 6);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (605, 'Lucesko', 'Pavirotti', 3);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (606, 'Jerty', 'de Libasco', 1);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (604, 'Kate', 'Laybot', 2);
-INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (607, 'Grew', 'Mojilly', 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (600, 'Alena', 'Kushnir', 7, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (601, 'Zinaida', 'Kravetz', 4, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (602, 'Jack', 'Stelot', 5, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (603, 'Iokko', 'Grotrico', 6, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (605, 'Lucesko', 'Pavirotti', 3, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (606, 'Jerty', 'de Libasco', 1, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (604, 'Kate', 'Laybot', 2, 1);
+INSERT INTO public.customer (id, first_name, last_name, id_country, id_city) VALUES (607, 'Grew', 'Mojilly', 1, 1);
 
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (600, 'Andrew', 'Gachinskiy', '1986-12-08', '2016-06-03', 'Kobyljans''ka str. 8', NULL, 16, null);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (601, 'Alex', 'Kravetz', '1975-09-07', '2013-05-17', 'Fed''kovycha str. 12/5', NULL, 15, 600);
