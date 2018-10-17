@@ -1013,25 +1013,33 @@ INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (606,
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (604, 'Kate', 'Laybot', 2);
 INSERT INTO public.customer (id, first_name, last_name, id_country) VALUES (607, 'Grew', 'Mojilly', 1);
 
-INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (600, 'Andrew', 'Gachinskiy', '1986-12-08', '2016-06-03', 'Kobyljans''ka str. 8', NULL, 16, 602);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (600, 'Andrew', 'Gachinskiy', '1986-12-08', '2016-06-03', 'Kobyljans''ka str. 8', NULL, 16, null);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (601, 'Alex', 'Kravetz', '1975-09-07', '2013-05-17', 'Fed''kovycha str. 12/5', NULL, 15, 600);
-INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (602, 'Edvard', 'Meyson', '1980-04-30', '2015-03-09', 'Vashyngtona str. 9/45', NULL, 11, 601);
-INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (603, 'Harold', 'Austin ', '1989-10-23', '2017-10-22', 'Meicrou str. 86/54', NULL, 13, 602);
-INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (604, 'Henry', 'Lamb ', '1976-02-03', '2014-12-06', 'Krusly str. 97/125', NULL, 6, 603);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (602, 'Edvard', 'Meyson', '1980-04-30', '2015-03-09', 'Vashyngtona str. 9/45', NULL, 11, 600);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (603, 'Harold', 'Austin ', '1989-10-23', '2017-10-22', 'Meicrou str. 86/54', NULL, 13, 600);
+INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (604, 'Henry', 'Lamb ', '1976-02-03', '2014-12-06', 'Krusly str. 97/125', NULL, 6, 602);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (605, 'Vitaliy', 'Ivanov', '1988-10-12', '2016-11-29', 'Kiivs''ka str. 31', NULL, 2, 600);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (607, 'Gruby', 'Mambrey', '1986-02-17', '2016-04-19', 'Frederico 3', NULL, 3, 600);
 INSERT INTO public.employee (id, first_name, last_name, date_birth, hire_date, adress, notes, id_city, id_chief) VALUES (606, 'Mathijs', 'van der Heijden ', '1991-08-23', '2015-09-15', 'Melilotu str. 94/98', NULL, 6, 600);
 
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (600, '2018-09-06', 600, 604, 16);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (601, '2018-05-23', 601, 600, 9);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (602, '2018-09-30', 602, 606, 10);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (603, '2018-08-12', 603, 601, 13);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (605, '2017-12-24', 605, 603, 6);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (604, '2018-03-22', 604, 602, 3);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (606, '2018-10-11', 606, 605, 2);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (607, '2018-09-15', 606, 602, 2);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (608, '2018-10-16', 607, 603, 1);
-INSERT INTO public."order" (id, date, id_customer, id_product, id_city_ship_adr_) VALUES (609, '2018-10-16', 607, 601, 1);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (600, '2018-09-06', 600, 16);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (601, '2018-05-23', 601, 9);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (602, '2018-09-30', 602, 10);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (603, '2018-08-12', 603, 13);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (605, '2017-12-24', 605, 6);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (604, '2018-03-22', 604, 3);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (606, '2018-10-11', 606, 2);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (607, '2018-09-15', 606, 2);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (608, '2018-10-16', 607, 1);
+INSERT INTO public."order" (id, date, id_customer, id_city_ship_adr_) VALUES (609, '2018-10-16', 607, 1);
+
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (600, 'clock "Ally Denovo"', 123, 2, 6);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (601, 'Perfume "Zara"', 245, 2, 1);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (602, 'Shampoo "Syoss"', 156, 1, 2);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (603, 'Washing powder "Ariel"', 329, 1, 3);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (604, 'Cheese "Tofu"', 135, 2, 5);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (605, 'charging cable "Remax"', 86, 2, 7);
+INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (606, 'Lighter "Zippo"', 234, 2, 4);
 
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (601, 5, 328, 606, 605);
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (602, 4, 532, 601, 600);
@@ -1044,11 +1052,4 @@ INSERT INTO public.order_item (id, count, historical_price, id_order, id_product
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (608, 2, 123, 608, 603);
 INSERT INTO public.order_item (id, count, historical_price, id_order, id_product) VALUES (609, 1, 235, 609, 601);
 
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (600, 'clock "Ally Denovo"', 123, 2, 6);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (601, 'Perfume "Zara"', 245, 2, 1);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (602, 'Shampoo "Syoss"', 156, 1, 2);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (603, 'Washing powder "Ariel"', 329, 1, 3);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (604, 'Cheese "Tofu"', 135, 2, 5);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (605, 'charging cable "Remax"', 86, 2, 7);
-INSERT INTO public.product (id, name, price_unit, id_category, id_country) VALUES (606, 'Lighter "Zippo"', 234, 2, 4);
 
