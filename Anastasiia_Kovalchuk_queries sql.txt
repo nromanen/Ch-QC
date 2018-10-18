@@ -1,0 +1,41 @@
+1. (1)
+Show all info about the employee with ID 8.
+
+SELECT * 
+FROM employee 
+WHERE id IN (8);
+
+2. (8)
+Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)
+
+SELECT id_city , EXTRACT(YEAR from AVG(AGE(date_birth))) 
+FROM employee
+GROUP BY id_city having EXTRACT(YEAR from AVG(AGE(date_birth))) >60
+
+
+3. (15)
+Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 (use a subquery).
+
+SELECT Employee.id, Employee.first_name, Employee.last_name, COUNT(orders.id) orders_count
+FROM public.Employee,
+    (SELECT public.Order.id, public.Order.id_employee FROM public.Order WHERE EXTRACT(year FROM date) = 1997) orders
+WHERE orders.id_employee = Employee.id
+GROUP BY Employee.id
+
+4. (22)
+*Show the list of french customers’ names who used to order non-french products (use left join).
+
+SELECT c.first_name AS customers_from_france FROM customer c
+JOIN public.order o ON c.id = o.id_customer
+JOIN order_item oi ON o.id = oi.id_order
+JOIN product ON product.id = oi.id_product
+WHERE product.id_country != '1' AND c.id_country != '1';
+
+5. (29)
+*Show the list of employees’ names along with names of their chiefs (use left join with the same table).
+
+SELECT m.first_name || ' ' || m.last_name AS "Manager", 
+       e.first_name || ' ' || e.last_name AS "Chief"
+FROM employee e
+LEFT JOIN employee m ON m.id = e.id_chief
+ORDER BY m.first_name;
