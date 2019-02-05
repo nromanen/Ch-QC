@@ -1,4 +1,4 @@
-﻿
+
 --
 -- TOC entry 2897 (class 0 OID 33007)
 -- Dependencies: 205
@@ -58,8 +58,8 @@ INSERT INTO public.city (id, name, country_id) VALUES (33, 'Brno', 10);
 INSERT INTO public.city (id, name, country_id) VALUES (34, 'Moscow', 11);
 INSERT INTO public.city (id, name, country_id) VALUES (35, 'Saint Petersburg', 11);
 INSERT INTO public.city (id, name, country_id) VALUES (36, 'Stockholm', 12);
-INSERT INTO public.city (id, name, country_id) VALUES (37, 'Malmö', 12);
-INSERT INTO public.city (id, name, country_id) VALUES (38, 'Göteborg', 12);
+INSERT INTO public.city (id, name, country_id) VALUES (37, 'Malm?', 12);
+INSERT INTO public.city (id, name, country_id) VALUES (38, 'G?teborg', 12);
 INSERT INTO public.city (id, name, country_id) VALUES (39, 'Oslo', 13);
 INSERT INTO public.city (id, name, country_id) VALUES (40, 'Bergen', 13);
 INSERT INTO public.city (id, name, country_id) VALUES (41, 'Trondheim', 13);
@@ -132,7 +132,7 @@ INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (305, 'Sab
 INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (306, 'Karine ', 'Andre', 8);
 INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (307, 'Manon', 'Vincent', 8);
 INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (308, 'Pierre', 'Dupont', 9);
-INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (309, 'Kévin', 'Petit', 10);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (309, 'K?vin', 'Petit', 10);
 INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (310, 'Maria', 'Fournier', 2);
 
 
@@ -211,5 +211,64 @@ INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_p
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (104, 105, 6, 100, 200);
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (105, 106, 4, 101, 499);
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (106, 108, 16, 102, 750);
+
+
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (630, 600, '1986-12-11', '2018-01-25', 'Poletaeva str.,6', 'Sinelnikova', 603);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (631, 601, '1974-11-02', '2014-11-12', 'Rusjka str.,115', 'Sinelnikova', 603);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (632, 602, '1980-02-15', '2011-12-11', 'Golovna str., 52', 'Sinelnikova', 603);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (633, 603, '1986-03-10', '2015-05-10', 'Komarova str., 10', 'Sinelnikova', 602);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (634, 604, '1970-02-11', '2016-06-17', 'Poletaeva str.,110', 'Sinelnikova', 602);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (635, 605, '1968-05-05', '1999-07-10', 'Golovna str.,110', 'Sinelnikova', 603);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (636, 606, '1970-06-11', '2000-08-01', 'Rusjka str.,123', 'Sinelnikova', 603);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (637, 607, '1985-07-12', '2000-09-02', 'Poletaeva str.,156', 'Sinelnikova', 602);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (638, 608, '1990-08-12', '2005-12-11', 'Golovna str., 78', 'Sinelnikova', 601);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (639, 609, '1995-12-08', '2006-12-08', 'Poletaeva str.,12', 'Sinelnikova', 601);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (640, 610, '2000-11-08', '2010-08-08', 'Golovna str.,10', 'Sinelnikova', 601);
+
+
+
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (670, 630, '2005-12-01', '2006-01-12', 600, 1);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (671, 632, '2010-01-01', '2010-02-01', 602, 3);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (672, 631, '2017-02-03', '2017-03-03', 601, 10);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (673, 635, '2017-03-04', '2017-05-04', 608, 15);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (674, 638, '2015-05-04', '2015-06-04', 609, 45);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (675, 639, '2017-06-01', '2017-07-02', 603, 30);
+
+
+
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (680, 650, 5, 670, 5);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (681, 651, 2, 671, 6);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (682, 652, 3, 672, 10);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (683, 653, 10, 673, 12);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (684, 654, 20, 674, 15);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (685, 655, 25, 675, 10);
+
+
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (600, 'Ivan', 'Ivanov', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (601, 'Sergiy', 'Sergeev', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (602, 'Irina', 'Sokolyan', 3);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (603, 'Igor', 'Velychuk', 5);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (604, 'Andriy', 'Malanyk', 4);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (605, 'Tetyana', 'Makarova', 6);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (606, 'Vasulj', 'Vasyljov', 7);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (607, 'Andriy', 'Goyan', 9);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (608, 'Ivan', 'Fadeev', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (609, 'Igor', 'Yaremchuk', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (610, 'Ivan', 'Seleev', 4);
+
+
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (650, 'prunes', 10, 1, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (651, 'kuraga', 15, 2, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (652, 'gotgam', 8, 8, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (653, 'Apple chips', 7, 7, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (654, 'Chifle', 10, 3, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (655, 'nut', 11, 4, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (656, 'Figs', 10, 15, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (657, 'Dates', 5, 3, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (658, 'Apricots', 6, 5, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (659, 'Peaches', 8, 2, 7);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (660, 'Raisins', 10, 1, 7);
+
+
 
 
