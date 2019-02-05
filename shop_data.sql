@@ -361,3 +361,65 @@ INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) V
 
 
 
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (701, 'Audrey', 'Smith', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (702, 'Catherine ', 'Edwards', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (703, 'Dexter', 'Round', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (704, 'Frankie', 'Walls', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (705, 'Matthew', 'Turner', 9);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (706, 'Pamela', 'Fletcher', 22);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (707, 'Scott', 'Bush', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (708, 'Victor', 'Bishop', 14);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (709, 'William', 'Jacobson', 10);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (710, 'Elvin', 'Thomas', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (700, 'Jenny', 'Vipirovsky', 9);
+
+
+
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (700, 703, '1988-10-11', '2012-03-31', '46 Lockfield Avenue
+', 'Mershon', 710);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (701, 707, '1985-12-27', '2010-04-01', '10-16 Buchanan Street', 'Mershon', 710);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (702, 701, '1997-11-04', '2017-08-25', '49 Featherstone Street', 'Mershon', 710);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (703, 700, '1978-05-28', '2007-02-13', '109 Silverburn Street', 'Mershon', 710);
+
+
+
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (700, 700, '2012-05-08', '2012-05-09', 703, 2);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (701, 700, '2013-01-15', '2013-01-17', 703, 2);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (702, 701, '2011-12-03', '2011-12-04', 707, 1);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (703, 701, '2014-10-17', '2014-10-19', 707, 8);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (704, 702, '2017-09-09', '2012-09-12', 701, 9);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (705, 702, '2017-11-15', '2017-11-16', 701, 5);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (706, 703, '2008-04-29', '2008-04-30', 700, 1);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (707, 703, '2010-07-19', '2010-07-20', 700, 16);
+
+
+
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (800, 'calvados', 135, 2, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (801, 'gin', 80, 6, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (802, 'tequila', 95, 3, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (803, 'vodka', 50, 11, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (804, 'champagne', 75, 7, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (805, 'absinthe', 220, 8, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (806, 'beer', 30, 5, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (807, 'whisky', 82, 1, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (808, 'brandy', 47, 14, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (809, 'cider', 23, 9, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (810, 'rum', 77, 12, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (811, 'liqueur ', 64, 4, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (812, 'cognac', 58, 10, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (813, 'sherry', 14, 13, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (814, 'wine', 116, 15, 9);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (815, 'punch', 65, 16, 9);
+
+
+
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (701, 805, 13, 704, 215);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (702, 803, 148, 701, 41);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (703, 813, 27, 701, 10);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (704, 809, 57, 707, 20);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (705, 807, 87, 703, 76);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (706, 804, 196, 704, 70);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (707, 814, 567, 705, 102);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (700, 800, 47, 705, 128);
+
+
