@@ -1,4 +1,4 @@
-
+﻿
 --
 -- TOC entry 2897 (class 0 OID 33007)
 -- Dependencies: 205
@@ -97,5 +97,73 @@ INSERT INTO public.country (id, name) VALUES (14, 'Finland');
 INSERT INTO public.country (id, name) VALUES (15, 'Romania');
 INSERT INTO public.country (id, name) VALUES (16, 'Hungary');
 
+
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (300, 301, '1984-11-01', '1997-12-19', '2175 Washington St', 'Kolotylo', 302);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (301, 305, '1973-12-12', '2000-11-16', '728 N Altamont St', 'Kolotylo', 302);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (302, 306, '1969-04-30', '2003-02-15', '16018 Inglewd Rd NE
+BOTHELL', 'Kolotylo', 302);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (303, 309, '1965-03-29', '2006-06-26', '19115 Ballinger Way NE', 'Kolotylo', 302);
+
+
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (300, 301, '2016-05-05', '2016-05-07', 300, 2);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (301, 301, '2016-07-13', '2016-07-14', 304, 17);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (302, 302, '2015-03-26', '2015-03-27', 307, 8);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (303, 302, '2015-02-02', '2015-02-03', 303, 7);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (304, 303, '2017-06-28', '2017-06-29', 302, 1);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (305, 303, '2017-06-09', '2017-06-10', 308, 9);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (306, 300, '2016-06-25', '2016-06-27', 308, 9);
+
+
+
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (300, 321, 1, 301, 14);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (301, 311, 1, 301, 15);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (302, 311, 1, 301, 15);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (303, 312, 1, 301, 9);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (304, 315, 1, 301, 12);
+
+
+
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (300, 'Alex', 'Smith', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (301, 'Anna', 'Popova', 14);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (302, 'Mike', 'Johnson', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (303, 'Hope', 'Brown', 7);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (304, 'Herbert', 'Schmidt ', 17);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (305, 'Sabine', 'Fischer', 17);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (306, 'Karine ', 'Andre', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (307, 'Manon', 'Vincent', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (308, 'Pierre', 'Dupont', 9);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (309, 'Kévin', 'Petit', 10);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (310, 'Maria', 'Fournier', 2);
+
+
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (300, 'Cuttlefish', 15, 6, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (301, 'Loco', 13, 7, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (302, 'Mussel', 12, 9, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (303, 'Octopus', 16, 13, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (304, 'Oyster', 9, 13, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (305, 'Scallop', 12, 13, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (306, 'Squid', 13, 14, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (307, 'Escargot', 10, 14, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (308, 'Bombay duck', 20, 12, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (309, 'Bream', 16, 6, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (310, 'crabs', 12, 16, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (311, 'lobsters', 13, 7, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (312, 'Krill', 10, 3, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (313, 'Langostino', 15, 2, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (314, 'Shrimp', 18, 1, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (315, 'Lamprey', 12, 1, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (316, 'Mackerel', 16, 14, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (317, 'Mullet', 17, 12, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (318, 'Pike', 16, 3, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (319, 'Pilchard', 15, 6, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (320, 'Pomfret', 19, 3, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (321, 'Salmon', 15, 1, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (322, 'Shark', 12, 12, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (323, 'Skate', 12, 13, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (324, 'Sturgeon', 13, 6, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (325, 'Surimi', 17, 7, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (326, 'Caviar', 18, 10, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (327, 'Lumpfish', 16, 13, 4);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (328, 'Tobiko', 14, 14, 4);
 
 
