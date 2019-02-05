@@ -156,6 +156,18 @@ INSERT INTO person (id, first_name, last_name, city_id) VALUES (8, 'Mario', 'Cas
 INSERT INTO person (id, first_name, last_name, city_id) VALUES (10, 'Alexandr', 'Fehling', 18);
 INSERT INTO person (id, first_name, last_name, city_id) VALUES (9, 'Franka', 'Potente', 12);
 
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (200, 'John', 'Newman', 1);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (201, 'Alan', 'Walker', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (202, 'Ariana', 'Grande', 3);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (203, 'Bruno', 'Mars', 4);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (204, 'Bebe', 'Rexha', 5);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (205, 'Charlie', 'Puth', 6);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (206, 'Chris', 'Brown', 7);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (207, 'Kanye', 'West', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (208, 'Ed', 'Sheeran', 9);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (209, 'Justin', 'Timberlake', 10);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (210, 'Adam', 'Levine', 11);
+
 
 INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (300, 301, '1984-11-01', '1997-12-19', '2175 Washington St', 'Kolotylo', 302);
 INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (301, 305, '1973-12-12', '2000-11-16', '728 N Altamont St', 'Kolotylo', 302);
@@ -210,6 +222,13 @@ VALUES
 (504, 514, '1985-02-28', '1990-08-17', 'DRAGRAM SUITE 5A', 514, 'Hanna Pyrizhok'),
 (505, 513, '1982-09-02', '1992-10-01', 'MAIN ST PO BOX 1022', 512, 'Hanna Pyrizhok');
 
+
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (201, 201, '1969-02-04', '1997-01-16', '20 Rue Saint-Martin, 75001 Paris', 'Havrylitsa', 209);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (200, 200, '1960-07-21', '1997-11-05', 'Wahaca, 119 Waterloo Rd, Lambeth, London SE1 8UL', 'Havrylitsa', 210);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (202, 202, '1990-11-16', '2018-12-12', 'Plaza de Carlos Cambronero, 4, 28004 Madrid', 'Havrylitsa', 210);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (203, 203, '1975-09-18', '2010-02-15', '26, Great Western Arcade, Colmore Row, Birmingham B2 5HU', 'Havrylitsa', 209);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (204, 204, '1985-04-01', '2009-06-03', '22 Lloyd Street, Albert Square, Manchester M2 5WA', 'Havrylitsa', 209);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (205, 205, '1984-09-22', '2007-10-24', '3 Port Dundas Pl, Glasgow G2 3LD', 'Havrylitsa', 210);
 
 
 INSERT INTO public.category (id, name) VALUES (1, 'Cheese');
@@ -350,7 +369,21 @@ VALUES
    (505, 'palm oil', 120, 4, 6);
 
 
-
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (200, 'Whale meat', 3000, 1, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (201, 'Beef', 150, 2, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (202, 'Pork', 130, 3, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (203, 'Horsemeat', 500, 4, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (204, 'Rabbit', 190, 5, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (205, 'Meat of Nutria', 250, 6, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (206, 'Chicken', 70, 7, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (207, 'Turkey', 130, 8, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (208, 'Snails', 200, 9, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (209, 'Frog''s thighs', 1000, 10, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (210, 'Kangaroo Meat', 1500, 11, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (211, 'Wild duck meat', 210, 12, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (212, 'Pheasan meat', 700, 13, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (213, 'Bushmeat', 2000, 14, 3);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (214, 'Turtle meat', 2500, 15, 3);
 
 
 INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (10, 2, '2018-11-03', '2018-11-03', 2, 2);
@@ -424,6 +457,14 @@ INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id
 INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (103, 103, '2015-10-10', '2015-10-29', 106, 4);
 
 
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (200, 200, '1997-01-15', '1997-01-16', 207, 1);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (201, 201, '1997-02-12', '1997-02-12', 206, 2);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (202, 202, '2010-06-17', '2010-06-18', 208, 3);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (203, 203, '2018-10-17', '2018-10-17', 205, 4);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (204, 201, '2016-08-31', '2016-09-01', 208, 5);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (205, 201, '2017-05-22', '2017-05-22', 206, 2);
+
+
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (300, 321, 1, 301, 14);
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (301, 311, 1, 301, 15);
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (302, 311, 1, 301, 15);
@@ -489,3 +530,15 @@ INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) V
 INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (1, 2, 2, 2, 8);
 
 
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (200, 200, 3, 200, 2500);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (201, 201, 1, 200, 150);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (202, 203, 5, 201, 500);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (203, 202, 3, 201, 130);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (204, 204, 1, 201, 190);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (205, 200, 1, 202, 3000);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (206, 209, 3, 203, 1000);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (207, 211, 2, 204, 210);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (208, 212, 5, 205, 700);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (209, 214, 2, 205, 2500);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (210, 205, 10, 205, 250);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (211, 207, 5, 205, 135);
