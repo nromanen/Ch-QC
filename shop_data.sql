@@ -291,3 +291,73 @@ INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (70
 
 
 
+INSERT INTO employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (1, 1, '1974-10-13', '1996-04-23', '184/85 Komarova str.', 'Chuchko', 10);
+INSERT INTO employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (2, 3, '1971-02-11', '1995-05-05', '30 str Mary Axe', 'Chuchko', 10);
+INSERT INTO employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (3, 6, '1979-07-14', '2004-06-03', '5 Parizer str', 'Chuchko', 10);
+INSERT INTO employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (4, 8, '1964-04-15', '1993-08-24', '477, Avinguda Diagonal', 'Chuchko', 10);
+
+
+
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (10, 2, '2018-11-03', '2018-11-03', 2, 2);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (1, 2, '2007-10-15', '2007-10-16', 9, 1);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (4, 1, '2014-08-14', '2014-08-14', 2, 8);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (5, 4, '2016-12-24', '2016-12-24', 1, 2);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (2, 2, '2009-04-14', '2009-04-14', 5, 3);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (3, 4, '2014-06-15', '2014-06-17', 4, 18);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (7, 2, '2018-05-06', '2018-05-07', 5, 17);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (8, 3, '2018-09-14', '2018-09-14', 9, 18);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (6, 3, '2018-03-14', '2018-03-15', 7, 3);
+INSERT INTO "order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (9, 1, '2018-10-11', '2018-10-11', 4, 5);
+
+
+
+
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (1, 'Oleg', 'Shevtsov', 15);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (2, 'Viktoria', 'Petrenko', 16);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (3, 'Harry', 'Jons', 1);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (4, 'Jessica', 'Korn', 1);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (6, 'Ben', 'Reddy', 4);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (5, 'Daniel', 'Caine', 5);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (7, 'Antonio', 'Banda', 3);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (8, 'Mario', 'Casas', 12);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (10, 'Alexandr', 'Fehling', 18);
+INSERT INTO person (id, first_name, last_name, city_id) VALUES (9, 'Franka', 'Potente', 12);
+
+
+
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (2, 'Edam', 7, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (3, 'Parmesan', 16, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (4, 'Emmental', 8, 5, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (5, 'Gouda', 7, 8, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (6, 'Feta', 4, 8, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (1, 'Tofu ', 10, 2, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (7, 'Brie', 8, 2, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (8, 'Mozzarella', 6, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (9, 'Ricotta', 9, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (10, 'Bryndza', 7, 4, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (11, 'Cheddar', 11, 12, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (12, 'Roquefort', 15, 2, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (13, 'Gorgonzola', 13, 5, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (14, 'Pecorino', 11, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (15, 'Camembert', 17, 2, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (16, 'Grana Padana', 15, 9, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (17, 'Limburger', 14, 3, 1);
+INSERT INTO product (id, name, price, country_id, category_id) VALUES (18, 'Munster', 18, 2, 1);
+
+
+
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (11, 1, 5, 1, 8);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (2, 3, 4, 2, 17);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (3, 6, 2, 3, 7);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (4, 8, 8, 4, 9);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (5, 11, 3, 5, 12);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (6, 18, 7, 6, 19);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (7, 13, 2, 7, 15);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (8, 10, 5, 8, 8);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (9, 1, 6, 9, 7);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (10, 14, 2, 10, 12);
+INSERT INTO order_items (id, product_id, quantity, order_id, historical_price) VALUES (1, 2, 2, 2, 8);
+
+
+
+
