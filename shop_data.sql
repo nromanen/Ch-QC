@@ -269,6 +269,25 @@ INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (65
 INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (659, 'Peaches', 8, 2, 7);
 INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (660, 'Raisins', 10, 1, 7);
 
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (801, 803, '2003-03-23', '2013-03-23', 'street 20', 'active', 801);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (802, 801, '1991-11-11', '2011-11-11', 'street 35', 'passive', 803);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (810, 801, '2018-10-20', '2017-11-20', 802, 5);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (811, 802, '2001-10-15', '2001-10-17', 803, 7);
+INSERT INTO public."order" (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (812, 802, '2001-10-20', '2001-10-25', 801, 9);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (821, 703, 26, 812, 24);
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (822, 701, 20, 811, 19);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (801, 'Kate', 'Jin', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (802, 'Art', 'House', 6);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (804, 'Kolya', 'Bibin', 7);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (805, 'Vita', 'Valet', 10);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (803, 'Sasha', 'Guf', 20);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (806, 'Galya', 'Glyk', 28);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (701, 'bamana', 29, 3, 8);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (702, 'coconut', 45, 2, 8);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (703, 'apple', 10, 4, 8);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (704, 'mango', 26, 5, 8);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (705, 'lemon', 30, 7, 8);
+
 
 
 
