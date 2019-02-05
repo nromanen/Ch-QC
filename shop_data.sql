@@ -423,3 +423,34 @@ INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_p
 INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (700, 800, 47, 705, 128);
 
 
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (400, 'Kopi Luwak', 960, 1, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (401, 'Jamaica Blue Mountain', 805, 1, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (402, 'Hawaii Captain Cook', 400, 2, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (403, 'Galapagos San Cristobal', 320, 2, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (404, 'Nepal Kukri Mount Everest', 235, 3, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (405, 'Ethiopia Sidamo', 86, 3, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (406, 'Cafe de Colombia', 150, 4, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (407, 'Java', 86, 4, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (408, 'Cote dazur', 81, 5, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (409, 'Sera', 86, 5, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (410, 'Lilla & Rose', 72, 6, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (411, 'Rosso & Nero', 81, 6, 5);
+INSERT INTO public.product (id, name, price, country_id, category_id) VALUES (412, 'Ballerina', 70, 7, 5);
+
+
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (400, 'Olexiy', 'Ivanov', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (401, 'Tymophy', 'Kozak', 8);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (402, 'Oksana', 'Lytvin', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (403, 'Lila', 'Goy', 2);
+INSERT INTO public.person (id, first_name, last_name, city_id) VALUES (404, 'Andriy', 'Bogach', 10);
+
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (400, 400, '1976-05-16', '1990-06-18', 'Geroiv Maydanu 103b', 'Madryha', 401);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (401, 403, '1976-07-18', '1995-07-20', 'Ruska 22', 'Madryha', null);
+INSERT INTO public.employee (id, person_id, birth_date, hire_date, address, note, chief_id) VALUES (402, 404, '1956-07-18', '1985-11-04', 'Vorobkevycha 45', 'Madryha', 401);
+
+INSERT INTO public.order (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (400, 400, '1999-11-12', '1999-11-14', 403, 16);
+INSERT INTO public.order (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (401, 401, '1997-07-04', '1997-07-06', 402, 18);
+INSERT INTO public.order (id, employee_id, order_date, shipped_date, person_id, city_delivery_id) VALUES (402, 402, '2002-01-02', '2002-01-05', 400, 02);
+
+
+INSERT INTO public.order_items (id, product_id, quantity, order_id, historical_price) VALUES (400, 410, 25, 400, 60);
