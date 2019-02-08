@@ -1,0 +1,39 @@
+9. Show the first and last name(s) of the eldest employee(s). Use a subquery.
+Select distinct ("first_name", "last_name"), "birth_date" From "person"
+inner join "employee" on "employee".person_id="person".id
+Order by "birth_date" ASC 
+Limit 10
+
+Select distinct ("first_name", "last_name"), "birth_date" From "person"
+inner join "employee" on "employee".person_id="person".id
+Where "birth_date" IN
+(Select Min (birth_date) From "employee")
+
+18.	Show the list of french customers’ names who have made more than one order (use grouping).
+select first_name 
+from person 
+inner join city on person.city_id = city.id 
+inner join country on city.country_id = country.id 
+inner join "order" on "order".person_id = person.id 
+where country.name='France'
+group by person.id, city.id, country.id  having count("order".id) > 1
+
+Select first_name 
+From "person" 
+inner join "order"  on "order".person_id="person".id
+inner join "order_items" on "order_items".order_id="order".id
+inner join "product" on "product".id="order_items".product_id
+inner join "country" on "country".id="product".country_id
+where "country".name='France'
+
+
+
+27. Show the list of product categories along with total ordering sums calculated for the orders made for the products of each category, during the year 1997.
+
+Select sum(price) as sumprice, "order".order_date, "category".name
+From "category"
+inner join "product" ON "category".id="product".category_id
+inner join "order_items" ON "product".id="order_items".product_id
+Inner Join "order" ON "order_items".order_id="order".id
+where date_part('year', "order".order_date) in (1995)
+group by "order".order_date, "category".name
