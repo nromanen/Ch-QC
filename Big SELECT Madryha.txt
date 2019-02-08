@@ -1,0 +1,28 @@
+5.	Calculate the count of employees from London.
+
+select count (person.first_name)
+from person, employee, city 
+where person.id=employee.person_id and 
+	person.city_id=city.id and
+	city.name = 'London'
+
+14.	Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 (use left join). »м€ раб и заказы полученые за 1997 год количество заказов
+
+select person.id personid, count (person.id) as AmountOrders, person.first_name || ' ' || person.last_name as FulName 
+from "order" join person
+on "order".person_id=person.id
+where date_part('year', "order".order_date) in (2017)
+group by person.id
+
+
+23.	Show the list of french customersТ names who used to order non-french products (use a subquery).
+
+select order_items.id, person.first_name, person.last_name, city.name, product.name, country.name
+from order_items 
+join product on order_items.product_id = product.id
+join "order" on order_items.order_id = "order".id
+join person on "order".person_id = person.id
+join city on person.city_id = city.id and city.country_id = 2
+join country on product.country_id = country.id and
+ 	country.name not in ('France')
+order by country.name, person.first_name, person.last_name
