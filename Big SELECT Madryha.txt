@@ -17,7 +17,7 @@ group by person.id
 
 23.	Show the list of french customers’ names who used to order non-french products (use a subquery).
 
-select order_items.id, person.first_name, person.last_name, city.name, product.name, country.name
+select order_items.id, person.first_name || ' ' || person.last_name as FulName, city.name, product.name, country.name
 from order_items 
 join product on order_items.product_id = product.id
 join "order" on order_items.order_id = "order".id
@@ -26,4 +26,4 @@ join city on person.city_id = city.id and
 	city.country_id = (select country.id from public.country where country.name in ('France'))
 join country on product.country_id = country.id and
  	country.name not in ('France')
-order by country.name, person.first_name, person.last_name
+order by country.name, FulName
