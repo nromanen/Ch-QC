@@ -1,0 +1,16 @@
+Please select one of two options according to UI/UX standards:
+A    or    B
+
+1.a)	Bad design of the button, because the text in are grey dark and it interferes user to read the word
+b)	Good design, the text in the button is readable
+
+2. А) bad design because the icon and text in the input look like disabled 
+ B) in this version it is successful, the text is well readable and the user understands that he can safely click on the search
+
+
+
+3.a)	Good design, because camera icon aligned with the  text
+b)	Bad design, because camera icon is not aligned with the  text
+
+4.a)	Bad design, because all icons are not in the same style. Some icons are contour, others are filled with color
+b)	Good, because all icons are in the same style
