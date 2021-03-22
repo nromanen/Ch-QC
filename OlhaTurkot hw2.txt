@@ -1,0 +1,9 @@
+Slack: Desktop Client for Communication tool
+
+Functional testing: 	check ability chatting with people;
+      			check ability to create chat with many people;
+			check ability to send files between people;
+Performance testing:    check time between sending and receiving message;
+UI Testing:		check if the program is convenient for using;
+Load testing:   	check how program works with 1000+ conversations;
+Compatibility testing: 	check how program works with different OS;
