@@ -1,0 +1,35 @@
+Types of testing for booking.com
+
+1. Functional 
+Task: Test possibility to book apartaments.
+Testing procedure:
+- check possibility to choose the city, dates, quantity of persons and rooms;
+- check possibility to book apartaments without authorization.
+- check possibility to choose type of the apartaments (flat, hotel, hostel, house)
+- check possibility to cancel booking.
+- check possibility to book apartaments with prepayment option and without it.
+- check possibility to enter personal data for booking apartaments.
+
+2. Non functional 
+ 1) UI
+Task: Test the compliance of UI elements to mock-ups/specifications/general standarts.
+Testing procedure:
+- check how UI elements is displayed in the application. 
+
+ 2) Localization
+Task: Test that the content of the site is translated into another language.
+Testing procedure: 
+- check possibitity to change language
+- check content is displayed after changinh the language to another.
+- check possibility to change the currency.
+ 
+
+ 3) Compatibility
+Task: Test the possibility to open application in different browsers.
+Test procedure: 
+- check if the application is opened in different browsers: Google Chrome, Opera, Mozilla, Internet Explorer, Safari
+
+ 4) Portability
+Task: Test how application is displayed in different screens
+Test procedure:
+- verify how application is displayed on laptops, tablets, mobile phones.
