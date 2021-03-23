@@ -1,0 +1,28 @@
+MS Word: Desktop Word Processing tool:
+    I: Functional testing : The program should be able to insert the photo by using the button "Рисунки"
+	                           1. Open the tab "Вставка"
+                                           2. Click on the button "Рисунки"
+                                           3. Choose some picture
+                                           4. Click on the button "Вставить"
+    II: Non-functional :
+1) Usability testing  
+2) UI testing
+3) Compatibility testing
+4) Maintainbility testing
+5) Performance testing
+6) Security
+7) Reliability
+8)Localization
+9)Internalization
+10)Portability
+ 
+III: 
+1)Verification:
+2) Validation:
+
+IV:
+1) Smoke 
+ - check the main functions of MS Word (try to save, make CRUD operations with the file, create table, insert photo, use Times New Roman font, change color, change the size of the text, use hot keys etc)
+2) Sanity
+- check the main functions of MS Word, but more detalized ()
+3) Regression
