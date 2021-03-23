@@ -1,0 +1,16 @@
+Testing types of MS PowerPoint: Desktop Presentation tool
+
+Functional:
+- Creating presentations
+- View presentations
+- Editing presentations
+
+Non-functional: 
+- Usability testing: is the software clear, user-friendly 
+and attractive to the user.
+- UI testing: to check the appearance of screen colors, 
+fonts, toolbar location.
+
+Regression:
+- Check after updating the program whether the basic 
+functions work.
