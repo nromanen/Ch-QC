@@ -1,0 +1,14 @@
+Home Work #3
+Testing types for «Gmail: Mobile Email Client for Android»
+1.	Positive testing – Entered valid values in the field email address (enter letters, symbols, @ in correct sequence) email address is correct.
+2.	Negative testing – Entered invalid values in the field email address (enter letters, symbols, without @ in incorrect sequence, for example -пп@tt -  error is shown: «enter a valid email address».
+3.	Black box testing – Check the email field of quantity of characters (valid, invalid), field length. (Use a technique test design like equivalence classes).
+4.	Acceptance testing - Received emails actually displayed as expected (received messages saved in folder «Inbox», sent messages in folder «Sent» and all functions which describe gmail app is match requirements).
+5.	Performance testing: Which quantity of contacts user can add to email address to send a message with file less 5 mb. Check the limit of memory size email box.
+6.	Usability testing: The user is registered in email app and evaluates his all details visual design, touch screen functions (this operation use with much respondents). 
+7.	Recoverability and availability testing – Function Sending messages when disconnected Internet is saved message in Draft folders.  (if user want to send a message there must be a connect with internet).
+8.	Localization testing – Switched of Language interface gmail. (if user changes the language on mobile phone, language changes in gmail app.).
+9.	Security testing – Function «Forgot password» works through user valid mobile phone. (User clicked on function «Forgot password» and input valid phone number to get the sms message for authentication).
+10.	Volume testing – Attach a file, or files to a message  where memory capacity not more than 5mb, or more than 5 mb. (user attach file where memory capacity more than 5mb – there is shown a pop –up message,or user attach more files capacity memory less than 5 mb.). 
+11.	Сross-browser testing –Home page gmail mobile app displayed on screen in Landscape, in Portrait   mode: (User in Gmail chooses Landscape, or Portrait mode and check that all elements is available and visible.)
+12.	GUI testing -  Check the size and localization all elements of graphic interface in gmail app.

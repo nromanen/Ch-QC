@@ -26,6 +26,3 @@ IV:
 2) Sanity
 - check the main functions of MS Word, but more detalized ()
 3) Regression
-
-
-
