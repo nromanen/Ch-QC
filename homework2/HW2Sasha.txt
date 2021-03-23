@@ -1,8 +1,3 @@
-Task is:
-1.select testing types to be applied while testing corresponding application;
-2.write down the requirements to be verified (one requirement per testing type);
-3.describe how the testing is going to be performed (for every selected testing type):
-	
 MS Word: Desktop Word Processing tool:
     I: Functional testing : The program should be able to insert the photo by using the button "Рисунки"
 	                           1. Open the tab "Вставка"
