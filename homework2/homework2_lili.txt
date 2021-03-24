@@ -1,0 +1,69 @@
+Functional testing
+
+The product must be added to the cart with one click on the “Add to cart” button on the item page
+Steps to reproduce:
+1. Open site amazon https://www.amazon.com
+2. Scroll down to categories
+3. Click on the category “Get fit on home”
+4. Click on the category “Outdoor recreation”
+5. Click on the first product
+6. When item page is opened click on the button “Add to cart”
+
+Functional testing
+
+User can delete the item from the cart by one click on the button “Delete”
+Steps to reproduce:
+1. Click on the cart icon
+2. Under the product click on the link “Delete”
+
+Non-Functional testing
+2.1 Performance Testing
+Verify response time is not more than 4 secs when 1000 users access the website simultaneously.
+
+2.2 Load Testing
+The comment on the product page should load in 1 second after clicking the “Send” button
+Steps to reproduce:
+1. Click on the product item
+2. Scroll down to the reviews
+3. Write a review
+4. Click  on the button “Send”
+
+2.3 Stress Testing
+Response time should come in 2 seconds when 1100 users click on the button “Add to cart” simultaneously, 
+if the rate is 1000 clicks at a time
+Steps to reproduce:
+1. Prepare and collect test environment, tools, and resources to strategize and make other components available for test.
+
+2.4 VolumeTesting
+Great comment in 1000 words should not affects the speed of processing
+Steps to reproduce:
+1. Click on the product item
+2. Scroll down to the reviews
+3. Write a review in 100 words 
+4. Click  on the button “Send”
+
+2.6 Usability Testing
+The cart icon should be on the left side of the header for ease of use
+Steps to reproduce:
+1. Open site Amazon
+2. Check the location of the cart icon
+
+2.7 UI Testing
+Active input fields must be highlighted in color
+Steps to reproduce:
+1. Open site Amazon
+2. Click on the search field
+3. Check if the field is highlighted 
+
+2.8 Compatibility Testing
+The site should work equally well on the browsers Google Chrome and Safari
+Steps to reproduce:
+1. Open site Amazon on Chrome browser
+2. Open site Amazon on Safari browser
+
+2.9 Localization Testing
+The site must be translated entirely into Portuguese
+Steps to reproduce:
+1. Open site Amazon
+2. Switch the language from English to Portuguese
+3. Check all fields, texts and dropdowns are translated into Portuguese
