@@ -1,28 +1,36 @@
 MS Word: Desktop Word Processing tool:
-    I: Functional testing : The program should be able to insert the photo by using the button "Рисунки"
+    I: Functional testing : 
+Positive functional :The program should be able to add the photo by using the button "Рисунки"
 	                           1. Open the tab "Вставка"
                                            2. Click on the button "Рисунки"
-                                           3. Choose some picture
+                                           3. Choose some picture with one of the formats :"GIF", "JPEG", "PNG"
                                            4. Click on the button "Вставить"
-    II: Non-functional :
-1) Usability testing  
-2) UI testing
-3) Compatibility testing
-4) Maintainbility testing
-5) Performance testing
-6) Security
-7) Reliability
-8)Localization
-9)Internalization
-10)Portability
+
+Negative functional: The program should send the message "Не удается отобразить рисунок" when the user has chosen not a photo (not a GIF", "JPEG", "PNG" format).
+                                           1. Open the tab "Вставка"
+                                           2. Click on the button "Рисунки"
+                                           3. Choose the "PDF" file                                                              4. Click on the button "Вставить"
+
+  II: Non-functional :
+1) Usability testing : The program is giving useful hints to the user when the user`s cursor is put more than 2 seconds on the button or icon (1. Open the tab "Главная" 2. put the cursor on the icon "Ж" )
+2) UI testing: Check that all UI elements on the screen are located according to the mock-ups or user UI requirements. (Verify the location and order of all tabs and elements on the screen)
+3) Compatibility testing MS Word should have the capacity to work together with MS Excel, in our case to add the diagrams from MS Excel (1. Open the tab "Вставка" 2. Click on the drop-down button "Таблица"  3. Choose the option "Таблица Excel" 4.Make some changes in Excel Table 5. Click on any place of the MS Word window )
+4) Maintainbility testing The program should accept new versions of it
+5) Performance testing (Load) The program must find the word as fast as possible when there is a huge amount of symbols in one file. 1.  Paste or write more than 20000 words 2. Open the tab "Главная" 3. Click on the button"Найти". 4. Paste in the search field the existing in the text word . Check how fast the MS Word showes all found words.
+6) Security The program must be able to set the password on the document 1. Go to Файл> Сведения> Защита документа > Зашифровать с использованием пароля. 2.Type a password, then type it again to confirm it. 3. Save the file to make sure the password takes effect. 4. Close the file 6. Try to open the file again. 7. Verify that the program requires password to open the file. 8. Put down the password.
+7)Localization The program changes the language of the whole interface 
+8)Internalization The special letters such as "ä" ,"ö", "ü" are visible in MS Word.  Testing procedure 1. Type the "ä" ,"ö", "ü"  in our file.
+9)Portability
+10) Accessebility The program must be developed according to "W.C.A.G" (The web content accessibility guideline) The program must be harmonized to the A and double A levels and must have "V.P.A.T" - Voluntary Product Accessibility Template.
+Testing procedure 1. Go to Файл > Сведения > Поиск проблем > Проверка читаемости. 2. Check if there is no accessability issues.
  
 III: 
-1)Verification:
-2) Validation:
+1)Verification: Are we building the product right?
+2) Validation: Are we building the right product? (Show the program to the stakeholder)
 
 IV:
 1) Smoke 
- - check the main functions of MS Word (try to save, make CRUD operations with the file, create table, insert photo, use Times New Roman font, change color, change the size of the text, use hot keys etc)
+ - check the main functions of MS Word (try to save, create table, insert photo, use Times New Roman font, change color, change the size of the text, use hot keys etc)
 2) Sanity
 - check the main functions of MS Word, but more detalized ()
-3) Regression
+
