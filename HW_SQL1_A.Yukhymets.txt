@@ -1,0 +1,44 @@
+1. Show all info about the employee with ID 8.
+
+select * 
+from employees e 
+where employee_id = 8;
+
+8. Show the list of cities in which the average age of employees is 
+greater than 60 (the average age is also to be shown)
+
+SELECT city, AVG(extract (year from age(current_date, employees.birth_date))) AS avg_age
+FROM Employees 
+GROUP BY city 
+HAVING AVG(extract (year from age(current_date, employees.birth_date))) > 60;
+
+15. Show first and last names of the employees as well as the count 
+of orders each of them have received during the year 1997 (use a subquery).
+
+(with join)
+select first_name, last_name, count(order_id)
+from employees 
+join orders on employees.employee_id = orders.employee_id 
+where order_date between '1997-12-01' and '1997-12-31'
+group by first_name, last_name;
+
+with (subquery)
+select first_name, last_name,
+(select count(order_id) from orders
+where employees.employee_id = orders.employee_id) as ord_count
+from employees, orders 
+where orders.order_date =
+(select orders.order_date from orders where order_date in ('1997-12-01'));
+
+22.*Show the list of french customers’ names who used to order non-french 
+products (use left join).
+
+select contact_name
+from customers left join orders
+on orders.customer_id = customers.customer_id 
+where orders.ship_country not like 'France' and customers.country like 'France'
+group by contact_name;
+
+29.*Show the list of employees’ names along with names of their chiefs 
+(use left join with the same table).
+
