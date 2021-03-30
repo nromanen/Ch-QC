@@ -1,10 +1,12 @@
-2)select first_name, last_name 
+2)Show the list of first and last names of the employees from London.
+select first_name, last_name 
 from employees
 where city = 'London';
-9) select first_name, last_name, extract (YEAR from AGE(CURRENT_DATE, employees.birth_date))
+9) Show the first and last name(s) of the eldest employee(s). Use a subquery.
+ select first_name, last_name, extract (YEAR from AGE(CURRENT_DATE, employees.birth_date))
 from employees 
 where extract (YEAR from AGE(CURRENT_DATE, employees.birth_date)) in (select max(extract (YEAR from AGE(CURRENT_DATE, employees.birth_date))) from employees);
-16) 
+16) Show first and last names of the employees as well as the count of their orders shipped after required date during the year 1997 (use left join).
 select e.first_name , e.last_name , count(orders.order_id) as orders_amount
 from orders
 left join employees e on orders.employee_id = e.employee_id 
