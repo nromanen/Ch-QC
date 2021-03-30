@@ -1,0 +1,39 @@
+Question 7
+
+/****** Calculate the greatest, the smallest and the average age of the employees for each city******/
+Select MAX((year(sysdatetime()) - year(BirthDate))) as MaxAge
+, Min((year(sysdatetime()) - year(BirthDate))) as MinAge
+, Avg ((year(sysdatetime()) - year(BirthDate))) as AvgAge
+, City
+, Count(LastName) as NumberOfEmployees
+From Employees
+Group by City
+
+
+Question 14
+
+/****** Show first and last names of the employees as well as the count of orders each of them have received during the year 1997 (use left join).  ******/
+SELECT [LastName]
+      ,[FirstName]
+	 , count(OrderID) as NumberOfOrders
+FROM Employees
+left join Orders
+on Employees.EmployeeID=Orders.EmployeeID
+where year(Orders.OrderDate) = 1997 
+group by Employees.LastName, FirstName
+
+
+Question 21
+
+/****** *Show the list of customers’ names who used to order the ‘Tofu’ product
+, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.  ******/
+SELECT C.CompanyName
+, sum(OD.Quantity)
+
+	  , (OD.UnitPrice * OD.Quantity) As TotalAmount
+FROM Customers C, Orders O, [Order Details] OD, Products P
+Where C.CustomerID = O.CustomerID 
+and O.OrderID=OD.OrderID
+and P.ProductID=OD.ProductID
+and P.ProductName like '%Tofu%'
+group by C.CompanyName
