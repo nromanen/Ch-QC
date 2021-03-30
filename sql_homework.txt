@@ -1,14 +1,54 @@
-2)Show the list of first and last names of the employees from London.
+--2. Show the list of first and last names of the employees from London.
 select first_name, last_name 
 from employees
 where city = 'London';
-9) Show the first and last name(s) of the eldest employee(s). Use a subquery.
- select first_name, last_name, extract (YEAR from AGE(CURRENT_DATE, employees.birth_date))
+
+
+--9. Show the first and last name(s) of the eldest employee(s). Use a subquery.
+
+select first_name, last_name, extract (YEAR from AGE(CURRENT_DATE, employees.birth_date)) 
 from employees 
 where extract (YEAR from AGE(CURRENT_DATE, employees.birth_date)) in (select max(extract (YEAR from AGE(CURRENT_DATE, employees.birth_date))) from employees);
-16) Show first and last names of the employees as well as the count of their orders shipped after required date during the year 1997 (use left join).
-select e.first_name , e.last_name , count(orders.order_id) as orders_amount
+
+
+-- 16. Show first and last names of the employees as well as the count of their orders shipped after required date during the year 1997 (use left join).
+
+select e.first_name , e.last_name , count(orders.order_id) 
 from orders
 left join employees e on orders.employee_id = e.employee_id 
 group by orders.required_date, e.first_name , e.last_name
-having orders.required_date between '1997-01-01' and '1997-12-31';
+having extract (year from (orders.required_date)) = 1997;
+
+
+--23 *Show the list of french customers’ names who used to order non-french products (use a subquery).
+
+select c.country, c.company_name, s2.city
+from customers c , suppliers s2
+where c.country = 'France' and s2.city in (select s2.city as french_products from orders o 
+ join order_details od on od.order_id = o.order_id 
+ join products p on od.product_id = p.product_id
+ join suppliers s2 on p.supplier_id = s2.supplier_id
+where s2.city not like 'France');
+
+
+--30 *Show the list of cities where employees and customers are from and where orders have been made to. Duplicates should be eliminated.
+
+(select distinct c.city as cities_list
+from customers c 
+join orders o on c.customer_id = o.customer_id) 
+union 
+(select distinct e.city 
+from employees e 
+join orders o on o.employee_id = e.employee_id)
+union
+(select distinct o.ship_city from orders o);
+
+
+
+
+
+
+
+
+
+
