@@ -1,0 +1,42 @@
+3. Show the list of first and last names of the employees whose first name begins with letter A.
+
+select first_name, last_name
+from employees
+where first_name like 'A%';
+
+10. Show first, last names and ages of 3 eldest employees.
+
+select first_name, last_name, EXTRACT(YEAR from AGE(birth_date)) as "age" from employees e2 
+order by age desc limit 3;
+
+17. Show the count of orders made by each customer from France.
+
+17.1 select count(orders)
+from orders 
+inner join Customers
+on orders.customer_id = customers.customer_id 
+where country = 'France';
+
+24. *Show the list of french customers’ names who used to order french products.
+
+select customers.* from order_details
+
+left join orders
+on order_details.order_id = orders.order_id
+left join customers 
+on orders.customer_id = customers.customer_id
+left join products
+on products.product_id = order_details.product_id 
+left join suppliers
+on suppliers.supplier_id = products.supplier_id 
+where customers.country like 'France' and suppliers.country like 'France';
+
+
+31. Insert 5 new records into Employees table. Fill in the following  fields: LastName, FirstName, BirthDate, HireDate, Address, City, Country, Notes. The Notes field should contain your own name (to distinguish your records from the ones inserted by other trainees).
+insert into employees (employee_id, last_name, first_name, birth_date, hire_date, address, city, country, notes)
+values 
+(10, 'berehech', 'liliia', '1995-11-16', '2021-03-30', 'chernivtsi', 'chernivtsi', 'ukraine', 'berehech_liliia'),
+(11, 'kovtun', 'maksim', '1998-08-17', '2021-03-30', 'kyiv', 'kyiv', 'ukraine', 'berehech_liliia'),
+(12, 'malik', 'pavlo', '1990-02-12', '2021-03-26', 'kharkiv', 'kharkiv', 'ukraine', 'berehech_liliia'),
+(13, 'holyan', 'ekaterina', '1986-09-01', '2021-03-12', 'chernivtsi', 'chernivtsi', 'ukraine', 'berehech_liliia'),
+(14, 'lobunets', 'liliia', '1993-12-15', '2021-03-27', 'lviv', 'lviv', 'ukraine', 'berehech_liliia');
