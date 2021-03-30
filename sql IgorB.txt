@@ -1,0 +1,18 @@
+1.	Calculate the count of employees from London. 
+select count (employee_id)
+from employees
+where city =  'London';
+
+8.	Show first, last names and dates of birth of the employees who celebrate their birthdays this month.
+select (first_name), (last_name), (birth_date), EXTRACT(MONTH FROM birth_date) as monthes 
+from employees
+where monthes='3';
+
+
+
+15.	Show the list of french customers’ names who have made more than one order (use a subquery).
+
+select (customer_id),(country),(order_id)
+from customers
+join orders on customers.customer_id = orders.customer.id;
+where ';
