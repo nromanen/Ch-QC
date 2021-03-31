@@ -19,7 +19,7 @@ of orders each of them have received during the year 1997 (use a subquery).
 select first_name, last_name, count(order_id)
 from employees 
 join orders on employees.employee_id = orders.employee_id 
-where order_date between '1997-12-01' and '1997-12-31'
+where order_date between '1997-01-01' and '1997-12-31'
 group by first_name, last_name;
 
 with (subquery)
@@ -33,12 +33,22 @@ where orders.order_date =
 22.*Show the list of french customers’ names who used to order non-french 
 products (use left join).
 
-select contact_name
-from customers left join orders
+select customers.contact_name, suppliers.country, customers.country 
+from customers 
+left join orders 
 on orders.customer_id = customers.customer_id 
-where orders.ship_country not like 'France' and customers.country like 'France'
-group by contact_name;
+left join order_details 
+on order_details.order_id = orders.order_id 
+left join products 
+on products.product_id = order_details.product_id 
+left join suppliers 
+on suppliers.supplier_id = products.supplier_id 
+where suppliers.country not like 'France' and customers.country like 'France'
+group by customers.contact_name, suppliers.country, customers.country;
 
 29.*Show the list of employees’ names along with names of their chiefs 
 (use left join with the same table).
 
+select e.first_name, e.last_name, chief.last_name
+from employees e
+left join employees chief on e.reports_to = chief.employee_id;
