@@ -1,0 +1,30 @@
+5. Calculate the count of employees from London. 
+select count (employee_id)
+from employees
+where city =  'London';
+
+12. Show first, last names and dates of birth of the employees who celebrate their birthdays this month.
+select (first_name), (last_name), (birth_date), extract (MONTH FROM birth_date) as monthes 
+from employees
+where extract (MONTH FROM birth_date) = extract (MONTH FROM current_date);
+
+19. Show the list of french customers’ names who have made more than one order (use a subquery).
+
+select country, customers.company_name, count (order_id) as orders_frenchcustomers
+from orders
+join customers on orders.customer_id = customers.customer_id
+group by customers.country, company_name
+having country = 'France';
+
+
+26. Show the total ordering sums calculated for each customer’s country for domestic and non-domestic products separately (e.g.: “France – French products ordered – Non-french products ordered” and so on for each country).
+select customers, order_details.unit_price*quantity as totalorders
+from order_details
+join orders on order_details.order_id = orders.order_id
+join customers on orders.customer_id = customers.customer_id
+order by country asc;
+
+33.  Change the City field in one of your records using the UPDATE statement (first run the SELECT statement to check whether you are updating the appropriate records!).
+UPDATE customers 
+SET city = 'Tokio'
+WHERE customer_id = `1`;
