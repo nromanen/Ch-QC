@@ -11,11 +11,11 @@ order by age desc limit 3;
 
 17. Show the count of orders made by each customer from France.
 
-17.1 select count(orders)
-from orders 
+select count(orders) as orders 
+from orders
 inner join Customers
 on orders.customer_id = customers.customer_id 
-where country = 'France';
+group by customers.customer_id having country like 'France';
 
 24. *Show the list of french customers’ names who used to order french products.
 
@@ -40,3 +40,30 @@ values
 (12, 'malik', 'pavlo', '1990-02-12', '2021-03-26', 'kharkiv', 'kharkiv', 'ukraine', 'berehech_liliia'),
 (13, 'holyan', 'ekaterina', '1986-09-01', '2021-03-12', 'chernivtsi', 'chernivtsi', 'ukraine', 'berehech_liliia'),
 (14, 'lobunets', 'liliia', '1993-12-15', '2021-03-27', 'lviv', 'lviv', 'ukraine', 'berehech_liliia');
+
+12. Show first, last names and dates of birth of the employees who celebrate their birthdays this month.
+
+select first_name, last_name, birth_date, extract(month from e2.birth_date) as employees_birthday 
+from employees e2
+where extract(month from e2.birth_date) = 3;
+
+19. Show the list of french customers’ names who have made more than one order (use a subquery).
+
+select customers.customer_id, count(quantity)
+from customers 
+left join orders 
+on customers.customer_id = orders.customer_id 
+left join order_details 
+on orders.order_id = order_details.order_id
+group by customers.customer_id having country like 'France' and count(quantity)>1;
+
+20. Show the list of customers’ names who used to order the ‘Tofu’ product (use a subquery)
+select customers.customer_id, products.product_name 
+from customers
+join orders 
+on customers.customer_id = orders.customer_id 
+join order_details 
+on orders.order_id = order_details.order_id
+join products 
+on order_details.product_id = products.product_id
+group by customers.customer_id, products.product_id having products.product_name like 'Tofu';
