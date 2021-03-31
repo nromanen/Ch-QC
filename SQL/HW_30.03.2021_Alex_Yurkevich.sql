@@ -17,12 +17,7 @@ on orders.customer_id = customers.customer_id
 group by company_name, customers.country 
 having country = 'France'; 
 
---25 Show the total ordering sum calculated for each country of customer.
-select customers.country, sum (order_id) as ordering_sum
-from orders
-join customers 
-on orders.customer_id = customers.customer_id
-group by customers.country;
+
 
 --32 Fetch the records you have inserted by the SELECT statement.
 create table categories2 (
@@ -36,3 +31,31 @@ insert into categories2 select * from categories;
 
 
 select * from categories2;
+
+
+--25 Show the total ordering sum calculated for each country of customer.
+--Покажіть загальну суму замовлення, розраховану для кожної країни замовника.
+
+select o2.ship_country, sum (unit_price * quantity) as total_ordering_sum
+from order_details od 
+join orders o2 
+on od.order_id = o2.order_id
+group by o2.ship_country
+order by o2.ship_country;
+
+
+select distinct ship_country 
+from orders;
+
+select distinct country 
+from customers;
+
+select c2.customer_id, o2.ship_country, sum ((unit_price - discount) * quantity) as total_ordering_sum
+from order_details od 
+join orders o2 
+on od.order_id = o2.order_id
+join customers c2 
+on o2.customer_id = c2.customer_id
+group by c2.customer_id, o2.ship_country
+order by o2.ship_country;
+
