@@ -14,8 +14,9 @@ select customers.company_name, count (order_id) as orders_from_french
 from orders
 join customers 
 on orders.customer_id = customers.customer_id
-group by company_name, customers.country 
-having country = 'France'; 
+where country like 'France'
+group by customers.customer_id 
+having count(order_id) > 1; 
 
 
 
@@ -34,28 +35,16 @@ select * from categories2;
 
 
 --25 Show the total ordering sum calculated for each country of customer.
---Покажіть загальну суму замовлення, розраховану для кожної країни замовника.
 
-select o2.ship_country, sum (unit_price * quantity) as total_ordering_sum
-from order_details od 
+select c2.customer_id, c2.country, sum ((unit_price - (unit_price * discount)) * quantity) 
+as total_ordering_sum
+from customers c2 
 join orders o2 
-on od.order_id = o2.order_id
-group by o2.ship_country
-order by o2.ship_country;
+on c2.customer_id = o2.customer_id 
+join order_details od 
+on o2.order_id = od.order_id 
+group by c2.customer_id
+order by c2.country;
 
 
-select distinct ship_country 
-from orders;
-
-select distinct country 
-from customers;
-
-select c2.customer_id, o2.ship_country, sum ((unit_price - discount) * quantity) as total_ordering_sum
-from order_details od 
-join orders o2 
-on od.order_id = o2.order_id
-join customers c2 
-on o2.customer_id = c2.customer_id
-group by c2.customer_id, o2.ship_country
-order by o2.ship_country;
 
